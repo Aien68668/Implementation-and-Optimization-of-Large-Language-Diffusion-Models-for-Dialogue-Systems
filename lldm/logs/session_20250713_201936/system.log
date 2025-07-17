@@ -1,0 +1,9 @@
+=== LLaDA 系统日志 ===
+启动时间: Sun Jul 13 20:19:38 CST 2025
+日志会话: 20250713_201936
+系统信息: Linux autodl-container-29e34aa8c9-8240387a 5.15.0-78-generic #85-Ubuntu SMP Fri Jul 7 15:25:09 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+内存信息:                total        used        free      shared  buff/cache   available
+Mem:           1.0Ti        77Gi        95Gi       1.2Gi       834Gi       923Gi
+磁盘信息: overlay          30G   20G   11G  65% /
+====================
+

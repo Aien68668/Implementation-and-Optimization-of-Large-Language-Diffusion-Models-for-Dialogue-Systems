@@ -1,0 +1,488 @@
+/* Sidebar样式 */
+.sidebar {
+  width: 280px; /* 减少侧边栏宽度 */
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden; /* 防止整体滚动 */
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* 侧边栏内容区域 */
+.sidebar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* 防止内容区域溢出 */
+}
+
+/* 顶部标题区域 */
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+}
+
+.system-title h2 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.system-title p {
+  margin: 5px 0 0 0;
+  font-size: 0.85em;
+  opacity: 0.9;
+  line-height: 1.2;
+}
+
+.collapse-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.collapse-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* 控制按钮区域 */
+.controls-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0; /* 防止压缩 */
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.control-btn.active {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.new-chat-btn:hover {
+  background: rgba(76, 175, 80, 0.3);
+}
+
+.btn-icon {
+  font-size: 16px;
+  min-width: 20px;
+}
+
+.btn-text {
+  font-weight: 500;
+}
+
+/* 对话历史区域 */
+.conversations-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* 防止整个区域溢出 */
+  min-height: 0; /* 允许弹性项目缩小 */
+}
+
+.section-title {
+  margin: 0 0 15px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  opacity: 0.9;
+  flex-shrink: 0; /* 标题不压缩 */
+}
+
+.conversations-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0; /* 允许弹性项目缩小 */
+}
+
+/* 添加可滚动样式 */
+.conversations-list.scrollable {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px; /* 为滚动条留出空间 */
+}
+
+/* 自定义滚动条样式 */
+.conversations-list.scrollable::-webkit-scrollbar {
+  width: 4px;
+}
+
+.conversations-list.scrollable::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.conversations-list.scrollable::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+
+.conversations-list.scrollable::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.empty-conversations {
+  text-align: center;
+  padding: 40px 20px;
+  opacity: 0.7;
+}
+
+.empty-conversations p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+.empty-conversations small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.conversation-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.conversation-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(2px);
+}
+
+.conversation-item.active {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.conversation-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.conversation-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conversation-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.conversation-time {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.conversation-count {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.delete-conversation-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  margin-left: 8px;
+}
+
+.delete-conversation-btn:hover {
+  background: rgba(255, 0, 0, 0.2);
+  color: #ff6b6b;
+  transform: scale(1.1);
+}
+
+/* 系统信息区域 */
+.system-info {
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  opacity: 0.8;
+}
+
+.info-value {
+  font-weight: 500;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+
+.status-indicator.healthy {
+  color: #4caf50;
+}
+
+.status-indicator.error {
+  color: #f44336;
+}
+
+/* 系统状态区域 */
+.system-status {
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* 防止压缩 */
+  margin-top: auto; /* 推到底部 */
+}
+
+.status-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-title::before {
+  content: '📊';
+  font-size: 0.9rem;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px 0;
+}
+
+.status-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.status-value {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-value.connected {
+  color: #4ade80;
+}
+
+.status-value.disconnected {
+  color: #f87171;
+}
+
+.status-value.loaded {
+  color: #4ade80;
+}
+
+.status-value.loading {
+  color: #fbbf24;
+}
+
+.status-value.generating {
+  color: #60a5fa;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-dot.success {
+  background-color: #4ade80;
+  box-shadow: 0 0 6px rgba(74, 222, 128, 0.5);
+}
+
+.status-dot.error {
+  background-color: #f87171;
+  box-shadow: 0 0 6px rgba(248, 113, 113, 0.5);
+}
+
+.status-dot.warning {
+  background-color: #fbbf24;
+  box-shadow: 0 0 6px rgba(251, 191, 36, 0.5);
+}
+
+.device-icon {
+  font-size: 0.9rem;
+}
+
+.generating-spinner {
+  width: 8px;
+  height: 8px;
+  border: 2px solid rgba(96, 165, 250, 0.3);
+  border-radius: 50%;
+  border-top-color: #60a5fa;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.last-check {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* 收起状态下隐藏系统状态 */
+.sidebar.collapsed .system-status {
+  display: none;
+}
+
+/* 滚动条样式 */
+.conversations-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.conversations-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.conversations-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.conversations-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* 收起状态下的样式 */
+.sidebar.collapsed .sidebar-header .system-title p,
+.sidebar.collapsed .btn-text,
+.sidebar.collapsed .conversations-section,
+.sidebar.collapsed .system-info {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-header {
+  justify-content: center;
+  padding: 20px 10px;
+}
+
+.sidebar.collapsed .system-title h2 {
+  font-size: 1.2em;
+}
+
+.sidebar.collapsed .collapse-btn {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 280px;
+  }
+  
+  .sidebar.collapsed {
+    width: 50px;
+  }
+}
+
+/* 动画效果 */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.sidebar {
+  animation: slideInLeft 0.3s ease-out;
+}

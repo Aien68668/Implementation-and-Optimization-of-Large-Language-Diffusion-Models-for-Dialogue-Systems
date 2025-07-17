@@ -1,0 +1,2768 @@
+=== LLaDA 后端服务日志 ===
+启动时间: Sun Jul 13 20:16:11 CST 2025
+日志会话: 20250713_201608
+Python版本: Python 3.12.3
+工作目录: /root/LLaDA-main/lldm
+设备检测: CUDA可用: True
+==========================
+
+2025-07-13 20:16:14 - INFO - [server.py:97] - 初始化设备: cuda
+2025-07-13 20:16:14 - INFO - [server.py:97] - 初始化设备: cuda
+2025-07-13 20:16:14 - INFO - [server.py:104] - GPU总内存: 23.5GB
+2025-07-13 20:16:14 - INFO - [server.py:104] - GPU总内存: 23.5GB
+2025-07-13 20:16:14 - INFO - [server.py:107] - 开始加载tokenizer...
+2025-07-13 20:16:14 - INFO - [server.py:107] - 开始加载tokenizer...
+2025-07-13 20:16:14 - INFO - [server.py:109] - Tokenizer加载成功
+2025-07-13 20:16:14 - INFO - [server.py:109] - Tokenizer加载成功
+2025-07-13 20:16:14 - INFO - [server.py:111] - 开始加载模型...
+2025-07-13 20:16:14 - INFO - [server.py:111] - 开始加载模型...
+2025-07-13 20:16:16 - INFO - [modeling.py:991] - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-07-13 20:16:16 - INFO - [modeling.py:991] - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-07-13 20:16:16 - WARNING - [modeling.py:1114] - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2025-07-13 20:16:16 - WARNING - [modeling.py:1114] - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:02,  1.95it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:01<00:02,  1.67it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:01<00:02,  1.46it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:02<00:01,  1.40it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:03<00:00,  1.35it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:04<00:00,  1.47it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:04<00:00,  1.47it/s]
+2025-07-13 20:16:20 - INFO - [server.py:129] - 模型加载成功，设备: cuda
+2025-07-13 20:16:20 - INFO - [server.py:129] - 模型加载成功，设备: cuda
+2025-07-13 20:16:20 - INFO - [server.py:132] - GPU已分配内存: 14.9GB
+2025-07-13 20:16:20 - INFO - [server.py:132] - GPU已分配内存: 14.9GB
+ * Serving Flask app 'server'
+ * Debug mode: off
+2025-07-13 20:16:20 - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.17.0.3:9000
+2025-07-13 20:16:20 - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.17.0.3:9000
+2025-07-13 20:16:20 - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-07-13 20:16:20 - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-07-13 20:16:20 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "curl/7.81.0",
+  "timestamp": "2025-07-13T20:16:20.215950"
+}
+2025-07-13 20:16:20 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "curl/7.81.0",
+  "timestamp": "2025-07-13T20:16:20.215950"
+}
+2025-07-13 20:16:20 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:20.216558",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:16:20 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:20.216558",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:16:20 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:20] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:16:20 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:20] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:16:24 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T20:16:24.721854"
+}
+2025-07-13 20:16:24 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T20:16:24.721854"
+}
+2025-07-13 20:16:24 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:24.722618",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:16:24 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:24.722618",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:16:24 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:24] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:16:24 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:24] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:16:25 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T20:16:25.728198",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      }
+    ],
+    "settings": {
+      "gen_length": 16,
+      "steps": 8,
+      "temperature": 0.0,
+      "cfg_scale": 0.0
+    }
+  }
+}
+2025-07-13 20:16:25 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T20:16:25.728198",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      }
+    ],
+    "settings": {
+      "gen_length": 16,
+      "steps": 8,
+      "temperature": 0.0,
+      "cfg_scale": 0.0
+    }
+  }
+}
+2025-07-13 20:16:25 - INFO - [server.py:429] - [req_1752408985728] 收到生成请求
+2025-07-13 20:16:25 - INFO - [server.py:429] - [req_1752408985728] 收到生成请求
+2025-07-13 20:16:25 - INFO - [server.py:437] - [req_1752408985728] 请求数据详情:
+2025-07-13 20:16:25 - INFO - [server.py:437] - [req_1752408985728] 请求数据详情:
+2025-07-13 20:16:25 - INFO - [server.py:438] - [req_1752408985728] - 消息数量: 1
+2025-07-13 20:16:25 - INFO - [server.py:438] - [req_1752408985728] - 消息数量: 1
+2025-07-13 20:16:25 - INFO - [server.py:439] - [req_1752408985728] - 设置参数: {
+  "gen_length": 16,
+  "steps": 8,
+  "temperature": 0.0,
+  "cfg_scale": 0.0
+}
+2025-07-13 20:16:25 - INFO - [server.py:439] - [req_1752408985728] - 设置参数: {
+  "gen_length": 16,
+  "steps": 8,
+  "temperature": 0.0,
+  "cfg_scale": 0.0
+}
+2025-07-13 20:16:25 - DEBUG - [server.py:440] - [req_1752408985728] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好"
+  }
+]
+2025-07-13 20:16:25 - INFO - [server.py:451] - [req_1752408985728] 开始生成响应...
+2025-07-13 20:16:25 - INFO - [server.py:451] - [req_1752408985728] 开始生成响应...
+2025-07-13 20:16:25 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:16:25 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:16:25 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:16:25 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:16:25 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 20:16:25 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 20:16:25 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 20:16:25 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 20:16:25 - DEBUG - [server.py:206] - 消息 1 内容: 你好
+2025-07-13 20:16:25 - INFO - [server.py:208] - 设置参数: {
+  "gen_length": 16,
+  "steps": 8,
+  "temperature": 0.0,
+  "cfg_scale": 0.0
+}
+2025-07-13 20:16:25 - INFO - [server.py:208] - 设置参数: {
+  "gen_length": 16,
+  "steps": 8,
+  "temperature": 0.0,
+  "cfg_scale": 0.0
+}
+2025-07-13 20:16:25 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 20:16:25 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 20:16:25 - INFO - [server.py:225] - 生成前GPU内存使用: 14.93GB
+2025-07-13 20:16:25 - INFO - [server.py:225] - 生成前GPU内存使用: 14.93GB
+2025-07-13 20:16:25 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:16:25 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:16:25 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 20:16:25 - INFO - [server.py:234] - 输入token数量: 14
+2025-07-13 20:16:25 - INFO - [server.py:234] - 输入token数量: 14
+2025-07-13 20:16:25 - INFO - [server.py:241] - 序列总长度: 30, prompt长度: 14, 生成长度: 16
+2025-07-13 20:16:25 - INFO - [server.py:241] - 序列总长度: 30, prompt长度: 14, 生成长度: 16
+2025-07-13 20:16:25 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 20:16:25 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 20:16:25 - INFO - [server.py:270] - 块处理配置: 块长度=16, 块数量=1, 每块步数=8
+2025-07-13 20:16:25 - INFO - [server.py:270] - 块处理配置: 块长度=16, 块数量=1, 每块步数=8
+2025-07-13 20:16:25 - INFO - [server.py:274] - 处理第 1/1 块...
+2025-07-13 20:16:25 - INFO - [server.py:274] - 处理第 1/1 块...
+2025-07-13 20:16:26 - INFO - [server.py:381] - 生成后GPU内存使用: 15.36GB
+2025-07-13 20:16:26 - INFO - [server.py:381] - 生成后GPU内存使用: 15.36GB
+2025-07-13 20:16:26 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:16:26 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:16:26 - INFO - [server.py:384] - 响应文本长度: 17
+2025-07-13 20:16:26 - INFO - [server.py:384] - 响应文本长度: 17
+2025-07-13 20:16:26 - INFO - [server.py:385] - 可视化步骤数: 9
+2025-07-13 20:16:26 - INFO - [server.py:385] - 可视化步骤数: 9
+2025-07-13 20:16:26 - INFO - [server.py:386] - 生成耗时: 0.60秒
+2025-07-13 20:16:26 - INFO - [server.py:386] - 生成耗时: 0.60秒
+2025-07-13 20:16:26 - DEBUG - [server.py:387] - 生成的响应文本: 你好！有什么我可以可以帮助你的吗？
+2025-07-13 20:16:26 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:16:26 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:16:26 - INFO - [server.py:460] - [req_1752408985728] 生成成功!
+2025-07-13 20:16:26 - INFO - [server.py:460] - [req_1752408985728] 生成成功!
+2025-07-13 20:16:26 - INFO - [server.py:461] - [req_1752408985728] 响应长度: 17
+2025-07-13 20:16:26 - INFO - [server.py:461] - [req_1752408985728] 响应长度: 17
+2025-07-13 20:16:26 - INFO - [server.py:462] - [req_1752408985728] 可视化步骤: 9
+2025-07-13 20:16:26 - INFO - [server.py:462] - [req_1752408985728] 可视化步骤: 9
+2025-07-13 20:16:26 - INFO - [server.py:463] - [req_1752408985728] 总耗时: 0.60秒
+2025-07-13 20:16:26 - INFO - [server.py:463] - [req_1752408985728] 总耗时: 0.60秒
+2025-07-13 20:16:26 - DEBUG - [server.py:464] - [req_1752408985728] 响应文本: 你好！有什么我可以可以帮助你的吗？
+2025-07-13 20:16:26 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 3111,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:26.331212"
+}
+2025-07-13 20:16:26 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 3111,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:26.331212"
+}
+2025-07-13 20:16:26 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:26] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:16:26 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:26] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:16:27 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T20:16:27.338436",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气怎么样？"
+      }
+    ],
+    "settings": {
+      "gen_length": 12,
+      "steps": 6,
+      "temperature": 0.0,
+      "constraints": "0:今天, 2:天气, 4:很好"
+    }
+  }
+}
+2025-07-13 20:16:27 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T20:16:27.338436",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气怎么样？"
+      }
+    ],
+    "settings": {
+      "gen_length": 12,
+      "steps": 6,
+      "temperature": 0.0,
+      "constraints": "0:今天, 2:天气, 4:很好"
+    }
+  }
+}
+2025-07-13 20:16:27 - INFO - [server.py:429] - [req_1752408987339] 收到生成请求
+2025-07-13 20:16:27 - INFO - [server.py:429] - [req_1752408987339] 收到生成请求
+2025-07-13 20:16:27 - INFO - [server.py:437] - [req_1752408987339] 请求数据详情:
+2025-07-13 20:16:27 - INFO - [server.py:437] - [req_1752408987339] 请求数据详情:
+2025-07-13 20:16:27 - INFO - [server.py:438] - [req_1752408987339] - 消息数量: 1
+2025-07-13 20:16:27 - INFO - [server.py:438] - [req_1752408987339] - 消息数量: 1
+2025-07-13 20:16:27 - INFO - [server.py:439] - [req_1752408987339] - 设置参数: {
+  "gen_length": 12,
+  "steps": 6,
+  "temperature": 0.0,
+  "constraints": "0:今天, 2:天气, 4:很好"
+}
+2025-07-13 20:16:27 - INFO - [server.py:439] - [req_1752408987339] - 设置参数: {
+  "gen_length": 12,
+  "steps": 6,
+  "temperature": 0.0,
+  "constraints": "0:今天, 2:天气, 4:很好"
+}
+2025-07-13 20:16:27 - DEBUG - [server.py:440] - [req_1752408987339] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "今天天气怎么样？"
+  }
+]
+2025-07-13 20:16:27 - INFO - [server.py:451] - [req_1752408987339] 开始生成响应...
+2025-07-13 20:16:27 - INFO - [server.py:451] - [req_1752408987339] 开始生成响应...
+2025-07-13 20:16:27 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:16:27 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:16:27 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:16:27 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:16:27 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 20:16:27 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 20:16:27 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=8
+2025-07-13 20:16:27 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=8
+2025-07-13 20:16:27 - DEBUG - [server.py:206] - 消息 1 内容: 今天天气怎么样？
+2025-07-13 20:16:27 - INFO - [server.py:208] - 设置参数: {
+  "gen_length": 12,
+  "steps": 6,
+  "temperature": 0.0,
+  "constraints": "0:今天, 2:天气, 4:很好"
+}
+2025-07-13 20:16:27 - INFO - [server.py:208] - 设置参数: {
+  "gen_length": 12,
+  "steps": 6,
+  "temperature": 0.0,
+  "constraints": "0:今天, 2:天气, 4:很好"
+}
+2025-07-13 20:16:27 - INFO - [server.py:220] - 解析后的约束: {0: '今天', 2: '天气', 4: '很好'}
+2025-07-13 20:16:27 - INFO - [server.py:220] - 解析后的约束: {0: '今天', 2: '天气', 4: '很好'}
+2025-07-13 20:16:27 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 20:16:27 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 20:16:27 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:16:27 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:16:27 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+今天天气怎么样？<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 20:16:27 - INFO - [server.py:234] - 输入token数量: 17
+2025-07-13 20:16:27 - INFO - [server.py:234] - 输入token数量: 17
+2025-07-13 20:16:27 - INFO - [server.py:241] - 序列总长度: 29, prompt长度: 17, 生成长度: 12
+2025-07-13 20:16:27 - INFO - [server.py:241] - 序列总长度: 29, prompt长度: 17, 生成长度: 12
+2025-07-13 20:16:27 - INFO - [server.py:250] - 应用约束数量: 5
+2025-07-13 20:16:27 - INFO - [server.py:250] - 应用约束数量: 5
+2025-07-13 20:16:27 - DEBUG - [server.py:255] - 约束位置 0 (绝对位置 17): token_id=34808
+2025-07-13 20:16:27 - DEBUG - [server.py:255] - 约束位置 2 (绝对位置 19): token_id=220
+2025-07-13 20:16:27 - DEBUG - [server.py:255] - 约束位置 3 (绝对位置 20): token_id=13092
+2025-07-13 20:16:27 - DEBUG - [server.py:255] - 约束位置 4 (绝对位置 21): token_id=220
+2025-07-13 20:16:27 - DEBUG - [server.py:255] - 约束位置 5 (绝对位置 22): token_id=9052
+2025-07-13 20:16:27 - INFO - [server.py:270] - 块处理配置: 块长度=12, 块数量=1, 每块步数=6
+2025-07-13 20:16:27 - INFO - [server.py:270] - 块处理配置: 块长度=12, 块数量=1, 每块步数=6
+2025-07-13 20:16:27 - INFO - [server.py:274] - 处理第 1/1 块...
+2025-07-13 20:16:27 - INFO - [server.py:274] - 处理第 1/1 块...
+2025-07-13 20:16:27 - INFO - [server.py:381] - 生成后GPU内存使用: 15.35GB
+2025-07-13 20:16:27 - INFO - [server.py:381] - 生成后GPU内存使用: 15.35GB
+2025-07-13 20:16:27 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:16:27 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:16:27 - INFO - [server.py:384] - 响应文本长度: 22
+2025-07-13 20:16:27 - INFO - [server.py:384] - 响应文本长度: 22
+2025-07-13 20:16:27 - INFO - [server.py:385] - 可视化步骤数: 7
+2025-07-13 20:16:27 - INFO - [server.py:385] - 可视化步骤数: 7
+2025-07-13 20:16:27 - INFO - [server.py:386] - 生成耗时: 0.21秒
+2025-07-13 20:16:27 - INFO - [server.py:386] - 生成耗时: 0.21秒
+2025-07-13 20:16:27 - DEBUG - [server.py:387] - 生成的响应文本:  今天 的 天气 很好，阳光明媚，气温适宜。
+2025-07-13 20:16:27 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:16:27 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:16:27 - INFO - [server.py:460] - [req_1752408987339] 生成成功!
+2025-07-13 20:16:27 - INFO - [server.py:460] - [req_1752408987339] 生成成功!
+2025-07-13 20:16:27 - INFO - [server.py:461] - [req_1752408987339] 响应长度: 22
+2025-07-13 20:16:27 - INFO - [server.py:461] - [req_1752408987339] 响应长度: 22
+2025-07-13 20:16:27 - INFO - [server.py:462] - [req_1752408987339] 可视化步骤: 7
+2025-07-13 20:16:27 - INFO - [server.py:462] - [req_1752408987339] 可视化步骤: 7
+2025-07-13 20:16:27 - INFO - [server.py:463] - [req_1752408987339] 总耗时: 0.22秒
+2025-07-13 20:16:27 - INFO - [server.py:463] - [req_1752408987339] 总耗时: 0.22秒
+2025-07-13 20:16:27 - DEBUG - [server.py:464] - [req_1752408987339] 响应文本:  今天 的 天气 很好，阳光明媚，气温适宜。
+2025-07-13 20:16:27 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 2097,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:27.559204"
+}
+2025-07-13 20:16:27 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 2097,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:27.559204"
+}
+2025-07-13 20:16:27 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:27] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:16:27 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:27] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:16:49 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:16:49.418787"
+}
+2025-07-13 20:16:49 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:16:49.418787"
+}
+2025-07-13 20:16:49 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:49.419639",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:16:49 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:49.419639",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:16:49 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:49] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:16:49 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:49] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:16:49 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:16:49.502439"
+}
+2025-07-13 20:16:49 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:16:49.502439"
+}
+2025-07-13 20:16:49 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:49.503145",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:16:49 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:49.503145",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:16:49 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:49] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:16:49 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:49] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:16:56 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:16:56.448929"
+}
+2025-07-13 20:16:56 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:16:56.448929"
+}
+2025-07-13 20:16:56 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T20:16:56.449720"
+}
+2025-07-13 20:16:56 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T20:16:56.449720"
+}
+2025-07-13 20:16:56 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:56] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 20:16:56 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:56] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 20:16:56 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:16:56.708658",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 50,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 20:16:56 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:16:56.708658",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 50,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 20:16:56 - INFO - [server.py:429] - [req_1752409016709] 收到生成请求
+2025-07-13 20:16:56 - INFO - [server.py:429] - [req_1752409016709] 收到生成请求
+2025-07-13 20:16:56 - INFO - [server.py:437] - [req_1752409016709] 请求数据详情:
+2025-07-13 20:16:56 - INFO - [server.py:437] - [req_1752409016709] 请求数据详情:
+2025-07-13 20:16:56 - INFO - [server.py:438] - [req_1752409016709] - 消息数量: 1
+2025-07-13 20:16:56 - INFO - [server.py:438] - [req_1752409016709] - 消息数量: 1
+2025-07-13 20:16:56 - INFO - [server.py:439] - [req_1752409016709] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:16:56 - INFO - [server.py:439] - [req_1752409016709] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:16:56 - DEBUG - [server.py:440] - [req_1752409016709] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好，"
+  }
+]
+2025-07-13 20:16:56 - INFO - [server.py:451] - [req_1752409016709] 开始生成响应...
+2025-07-13 20:16:56 - INFO - [server.py:451] - [req_1752409016709] 开始生成响应...
+2025-07-13 20:16:56 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:16:56 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:16:56 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:16:56 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:16:56 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 20:16:56 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 20:16:56 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=3
+2025-07-13 20:16:56 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=3
+2025-07-13 20:16:56 - DEBUG - [server.py:206] - 消息 1 内容: 你好，
+2025-07-13 20:16:56 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:16:56 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:16:56 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 20:16:56 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 20:16:56 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 20:16:56 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 20:16:56 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:16:56 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:16:56 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好，<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 20:16:56 - INFO - [server.py:234] - 输入token数量: 15
+2025-07-13 20:16:56 - INFO - [server.py:234] - 输入token数量: 15
+2025-07-13 20:16:56 - INFO - [server.py:241] - 序列总长度: 65, prompt长度: 15, 生成长度: 50
+2025-07-13 20:16:56 - INFO - [server.py:241] - 序列总长度: 65, prompt长度: 15, 生成长度: 50
+2025-07-13 20:16:56 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 20:16:56 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 20:16:56 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 20:16:56 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 20:16:56 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 20:16:56 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 20:16:56 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 20:16:56 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 20:16:57 - INFO - [server.py:381] - 生成后GPU内存使用: 16.88GB
+2025-07-13 20:16:57 - INFO - [server.py:381] - 生成后GPU内存使用: 16.88GB
+2025-07-13 20:16:57 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:16:57 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:16:57 - INFO - [server.py:384] - 响应文本长度: 9
+2025-07-13 20:16:57 - INFO - [server.py:384] - 响应文本长度: 9
+2025-07-13 20:16:57 - INFO - [server.py:385] - 可视化步骤数: 17
+2025-07-13 20:16:57 - INFO - [server.py:385] - 可视化步骤数: 17
+2025-07-13 20:16:57 - INFO - [server.py:386] - 生成耗时: 0.67秒
+2025-07-13 20:16:57 - INFO - [server.py:386] - 生成耗时: 0.67秒
+2025-07-13 20:16:57 - DEBUG - [server.py:387] - 生成的响应文本: 为你提供帮助！问题
+2025-07-13 20:16:57 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:16:57 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:16:57 - INFO - [server.py:460] - [req_1752409016709] 生成成功!
+2025-07-13 20:16:57 - INFO - [server.py:460] - [req_1752409016709] 生成成功!
+2025-07-13 20:16:57 - INFO - [server.py:461] - [req_1752409016709] 响应长度: 9
+2025-07-13 20:16:57 - INFO - [server.py:461] - [req_1752409016709] 响应长度: 9
+2025-07-13 20:16:57 - INFO - [server.py:462] - [req_1752409016709] 可视化步骤: 17
+2025-07-13 20:16:57 - INFO - [server.py:462] - [req_1752409016709] 可视化步骤: 17
+2025-07-13 20:16:57 - INFO - [server.py:463] - [req_1752409016709] 总耗时: 0.67秒
+2025-07-13 20:16:57 - INFO - [server.py:463] - [req_1752409016709] 总耗时: 0.67秒
+2025-07-13 20:16:57 - DEBUG - [server.py:464] - [req_1752409016709] 响应文本: 为你提供帮助！问题
+2025-07-13 20:16:57 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 17737,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:57.379833"
+}
+2025-07-13 20:16:57 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 17737,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:16:57.379833"
+}
+2025-07-13 20:16:57 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:57] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:16:57 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:16:57] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:17:18 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:17:18.591402"
+}
+2025-07-13 20:17:18 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:17:18.591402"
+}
+2025-07-13 20:17:18 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:17:18.592172",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:17:18 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:17:18.592172",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:17:18 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:17:18] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:17:18 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:17:18] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:17:49 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:17:49.021594"
+}
+2025-07-13 20:17:49 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:17:49.021594"
+}
+2025-07-13 20:17:49 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:17:49.021945",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:17:49 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:17:49.021945",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:17:49 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:17:49] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:17:49 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:17:49] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:17:52 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:17:52.398171"
+}
+2025-07-13 20:17:52 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:17:52.398171"
+}
+2025-07-13 20:17:52 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T20:17:52.398713"
+}
+2025-07-13 20:17:52 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T20:17:52.398713"
+}
+2025-07-13 20:17:52 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:17:52] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 20:17:52 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:17:52] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 20:17:53 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:17:53.299501",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，"
+      },
+      {
+        "role": "assistant",
+        "content": "为你提供帮助！问题"
+      },
+      {
+        "role": "user",
+        "content": "你是谁"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 50,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 20:17:53 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:17:53.299501",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，"
+      },
+      {
+        "role": "assistant",
+        "content": "为你提供帮助！问题"
+      },
+      {
+        "role": "user",
+        "content": "你是谁"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 50,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 20:17:53 - INFO - [server.py:429] - [req_1752409073300] 收到生成请求
+2025-07-13 20:17:53 - INFO - [server.py:429] - [req_1752409073300] 收到生成请求
+2025-07-13 20:17:53 - INFO - [server.py:437] - [req_1752409073300] 请求数据详情:
+2025-07-13 20:17:53 - INFO - [server.py:437] - [req_1752409073300] 请求数据详情:
+2025-07-13 20:17:53 - INFO - [server.py:438] - [req_1752409073300] - 消息数量: 3
+2025-07-13 20:17:53 - INFO - [server.py:438] - [req_1752409073300] - 消息数量: 3
+2025-07-13 20:17:53 - INFO - [server.py:439] - [req_1752409073300] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:17:53 - INFO - [server.py:439] - [req_1752409073300] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:17:53 - DEBUG - [server.py:440] - [req_1752409073300] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好，"
+  },
+  {
+    "role": "assistant",
+    "content": "为你提供帮助！问题"
+  },
+  {
+    "role": "user",
+    "content": "你是谁"
+  }
+]
+2025-07-13 20:17:53 - INFO - [server.py:451] - [req_1752409073300] 开始生成响应...
+2025-07-13 20:17:53 - INFO - [server.py:451] - [req_1752409073300] 开始生成响应...
+2025-07-13 20:17:53 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:17:53 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:17:53 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:17:53 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:17:53 - INFO - [server.py:203] - 输入消息数量: 3
+2025-07-13 20:17:53 - INFO - [server.py:203] - 输入消息数量: 3
+2025-07-13 20:17:53 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=3
+2025-07-13 20:17:53 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=3
+2025-07-13 20:17:53 - DEBUG - [server.py:206] - 消息 1 内容: 你好，
+2025-07-13 20:17:53 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=9
+2025-07-13 20:17:53 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=9
+2025-07-13 20:17:53 - DEBUG - [server.py:206] - 消息 2 内容: 为你提供帮助！问题
+2025-07-13 20:17:53 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=3
+2025-07-13 20:17:53 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=3
+2025-07-13 20:17:53 - DEBUG - [server.py:206] - 消息 3 内容: 你是谁
+2025-07-13 20:17:53 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:17:53 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:17:53 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 20:17:53 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 20:17:53 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 20:17:53 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 20:17:53 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:17:53 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:17:53 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好，<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+为你提供帮助！问题<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+你是谁<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 20:17:53 - INFO - [server.py:234] - 输入token数量: 33
+2025-07-13 20:17:53 - INFO - [server.py:234] - 输入token数量: 33
+2025-07-13 20:17:53 - INFO - [server.py:241] - 序列总长度: 83, prompt长度: 33, 生成长度: 50
+2025-07-13 20:17:53 - INFO - [server.py:241] - 序列总长度: 83, prompt长度: 33, 生成长度: 50
+2025-07-13 20:17:53 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 20:17:53 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 20:17:53 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 20:17:53 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 20:17:53 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 20:17:53 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 20:17:53 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 20:17:53 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 20:17:53 - INFO - [server.py:381] - 生成后GPU内存使用: 17.40GB
+2025-07-13 20:17:53 - INFO - [server.py:381] - 生成后GPU内存使用: 17.40GB
+2025-07-13 20:17:53 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:17:53 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:17:53 - INFO - [server.py:384] - 响应文本长度: 35
+2025-07-13 20:17:53 - INFO - [server.py:384] - 响应文本长度: 35
+2025-07-13 20:17:53 - INFO - [server.py:385] - 可视化步骤数: 17
+2025-07-13 20:17:53 - INFO - [server.py:385] - 可视化步骤数: 17
+2025-07-13 20:17:53 - INFO - [server.py:386] - 生成耗时: 0.66秒
+2025-07-13 20:17:53 - INFO - [server.py:386] - 生成耗时: 0.66秒
+2025-07-13 20:17:53 - DEBUG - [server.py:387] - 生成的响应文本: 有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。
+2025-07-13 20:17:53 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:17:53 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:17:53 - INFO - [server.py:460] - [req_1752409073300] 生成成功!
+2025-07-13 20:17:53 - INFO - [server.py:460] - [req_1752409073300] 生成成功!
+2025-07-13 20:17:53 - INFO - [server.py:461] - [req_1752409073300] 响应长度: 35
+2025-07-13 20:17:53 - INFO - [server.py:461] - [req_1752409073300] 响应长度: 35
+2025-07-13 20:17:53 - INFO - [server.py:462] - [req_1752409073300] 可视化步骤: 17
+2025-07-13 20:17:53 - INFO - [server.py:462] - [req_1752409073300] 可视化步骤: 17
+2025-07-13 20:17:53 - INFO - [server.py:463] - [req_1752409073300] 总耗时: 0.66秒
+2025-07-13 20:17:53 - INFO - [server.py:463] - [req_1752409073300] 总耗时: 0.66秒
+2025-07-13 20:17:53 - DEBUG - [server.py:464] - [req_1752409073300] 响应文本: 有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。
+2025-07-13 20:17:53 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 18781,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:17:53.960793"
+}
+2025-07-13 20:17:53 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 18781,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:17:53.960793"
+}
+2025-07-13 20:17:53 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:17:53] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:17:53 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:17:53] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:18:18 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:18:18.593248"
+}
+2025-07-13 20:18:18 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:18:18.593248"
+}
+2025-07-13 20:18:18 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:18:18.594143",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:18:18 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:18:18.594143",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:18:18 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:18:18] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:18:18 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:18:18] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:18:32 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:18:32.254241"
+}
+2025-07-13 20:18:32 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:18:32.254241"
+}
+2025-07-13 20:18:32 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T20:18:32.255180"
+}
+2025-07-13 20:18:32 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T20:18:32.255180"
+}
+2025-07-13 20:18:32 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:18:32] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 20:18:32 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:18:32] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 20:18:32 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:18:32.562274",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，"
+      },
+      {
+        "role": "assistant",
+        "content": "为你提供帮助！问题"
+      },
+      {
+        "role": "user",
+        "content": "你是谁"
+      },
+      {
+        "role": "assistant",
+        "content": "有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。"
+      },
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "settings": {
+      "temperature": 0,
+      "top_p": 0.95,
+      "gen_length": 88,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 20:18:32 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:18:32.562274",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，"
+      },
+      {
+        "role": "assistant",
+        "content": "为你提供帮助！问题"
+      },
+      {
+        "role": "user",
+        "content": "你是谁"
+      },
+      {
+        "role": "assistant",
+        "content": "有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。"
+      },
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "settings": {
+      "temperature": 0,
+      "top_p": 0.95,
+      "gen_length": 88,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 20:18:32 - INFO - [server.py:429] - [req_1752409112563] 收到生成请求
+2025-07-13 20:18:32 - INFO - [server.py:429] - [req_1752409112563] 收到生成请求
+2025-07-13 20:18:32 - INFO - [server.py:437] - [req_1752409112563] 请求数据详情:
+2025-07-13 20:18:32 - INFO - [server.py:437] - [req_1752409112563] 请求数据详情:
+2025-07-13 20:18:32 - INFO - [server.py:438] - [req_1752409112563] - 消息数量: 5
+2025-07-13 20:18:32 - INFO - [server.py:438] - [req_1752409112563] - 消息数量: 5
+2025-07-13 20:18:32 - INFO - [server.py:439] - [req_1752409112563] - 设置参数: {
+  "temperature": 0,
+  "top_p": 0.95,
+  "gen_length": 88,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:18:32 - INFO - [server.py:439] - [req_1752409112563] - 设置参数: {
+  "temperature": 0,
+  "top_p": 0.95,
+  "gen_length": 88,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:18:32 - DEBUG - [server.py:440] - [req_1752409112563] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好，"
+  },
+  {
+    "role": "assistant",
+    "content": "为你提供帮助！问题"
+  },
+  {
+    "role": "user",
+    "content": "你是谁"
+  },
+  {
+    "role": "assistant",
+    "content": "有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。"
+  },
+  {
+    "role": "user",
+    "content": "你是谁？"
+  }
+]
+2025-07-13 20:18:32 - INFO - [server.py:451] - [req_1752409112563] 开始生成响应...
+2025-07-13 20:18:32 - INFO - [server.py:451] - [req_1752409112563] 开始生成响应...
+2025-07-13 20:18:32 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:18:32 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:18:32 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:18:32 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:18:32 - INFO - [server.py:203] - 输入消息数量: 5
+2025-07-13 20:18:32 - INFO - [server.py:203] - 输入消息数量: 5
+2025-07-13 20:18:32 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=3
+2025-07-13 20:18:32 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=3
+2025-07-13 20:18:32 - DEBUG - [server.py:206] - 消息 1 内容: 你好，
+2025-07-13 20:18:32 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=9
+2025-07-13 20:18:32 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=9
+2025-07-13 20:18:32 - DEBUG - [server.py:206] - 消息 2 内容: 为你提供帮助！问题
+2025-07-13 20:18:32 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=3
+2025-07-13 20:18:32 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=3
+2025-07-13 20:18:32 - DEBUG - [server.py:206] - 消息 3 内容: 你是谁
+2025-07-13 20:18:32 - INFO - [server.py:205] - 消息 4: 角色=assistant, 内容长度=35
+2025-07-13 20:18:32 - INFO - [server.py:205] - 消息 4: 角色=assistant, 内容长度=35
+2025-07-13 20:18:32 - DEBUG - [server.py:206] - 消息 4 内容: 有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。
+2025-07-13 20:18:32 - INFO - [server.py:205] - 消息 5: 角色=user, 内容长度=4
+2025-07-13 20:18:32 - INFO - [server.py:205] - 消息 5: 角色=user, 内容长度=4
+2025-07-13 20:18:32 - DEBUG - [server.py:206] - 消息 5 内容: 你是谁？
+2025-07-13 20:18:32 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0,
+  "top_p": 0.95,
+  "gen_length": 88,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:18:32 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0,
+  "top_p": 0.95,
+  "gen_length": 88,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:18:32 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 20:18:32 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 20:18:32 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 20:18:32 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 20:18:32 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:18:32 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:18:32 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好，<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+为你提供帮助！问题<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+你是谁<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+你是谁？<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 20:18:32 - INFO - [server.py:234] - 输入token数量: 63
+2025-07-13 20:18:32 - INFO - [server.py:234] - 输入token数量: 63
+2025-07-13 20:18:32 - INFO - [server.py:241] - 序列总长度: 151, prompt长度: 63, 生成长度: 88
+2025-07-13 20:18:32 - INFO - [server.py:241] - 序列总长度: 151, prompt长度: 63, 生成长度: 88
+2025-07-13 20:18:32 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 20:18:32 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 20:18:32 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=3, 每块步数=10
+2025-07-13 20:18:32 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=3, 每块步数=10
+2025-07-13 20:18:32 - INFO - [server.py:274] - 处理第 1/3 块...
+2025-07-13 20:18:32 - INFO - [server.py:274] - 处理第 1/3 块...
+2025-07-13 20:18:32 - INFO - [server.py:274] - 处理第 2/3 块...
+2025-07-13 20:18:32 - INFO - [server.py:274] - 处理第 2/3 块...
+2025-07-13 20:18:32 - INFO - [server.py:274] - 处理第 3/3 块...
+2025-07-13 20:18:32 - INFO - [server.py:274] - 处理第 3/3 块...
+2025-07-13 20:18:33 - INFO - [server.py:381] - 生成后GPU内存使用: 18.90GB
+2025-07-13 20:18:33 - INFO - [server.py:381] - 生成后GPU内存使用: 18.90GB
+2025-07-13 20:18:33 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:18:33 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:18:33 - INFO - [server.py:384] - 响应文本长度: 36
+2025-07-13 20:18:33 - INFO - [server.py:384] - 响应文本长度: 36
+2025-07-13 20:18:33 - INFO - [server.py:385] - 可视化步骤数: 11
+2025-07-13 20:18:33 - INFO - [server.py:385] - 可视化步骤数: 11
+2025-07-13 20:18:33 - INFO - [server.py:386] - 生成耗时: 0.59秒
+2025-07-13 20:18:33 - INFO - [server.py:386] - 生成耗时: 0.59秒
+2025-07-13 20:18:33 - DEBUG - [server.py:387] - 生成的响应文本: 的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答诚实、无害的回答。
+2025-07-13 20:18:33 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:18:33 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:18:33 - INFO - [server.py:460] - [req_1752409112563] 生成成功!
+2025-07-13 20:18:33 - INFO - [server.py:460] - [req_1752409112563] 生成成功!
+2025-07-13 20:18:33 - INFO - [server.py:461] - [req_1752409112563] 响应长度: 36
+2025-07-13 20:18:33 - INFO - [server.py:461] - [req_1752409112563] 响应长度: 36
+2025-07-13 20:18:33 - INFO - [server.py:462] - [req_1752409112563] 可视化步骤: 11
+2025-07-13 20:18:33 - INFO - [server.py:462] - [req_1752409112563] 可视化步骤: 11
+2025-07-13 20:18:33 - INFO - [server.py:463] - [req_1752409112563] 总耗时: 0.59秒
+2025-07-13 20:18:33 - INFO - [server.py:463] - [req_1752409112563] 总耗时: 0.59秒
+2025-07-13 20:18:33 - DEBUG - [server.py:464] - [req_1752409112563] 响应文本: 的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答诚实、无害的回答。
+2025-07-13 20:18:33 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 20923,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:18:33.157089"
+}
+2025-07-13 20:18:33 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 20923,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:18:33.157089"
+}
+2025-07-13 20:18:33 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:18:33] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:18:33 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:18:33] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:18:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:18:48.596820"
+}
+2025-07-13 20:18:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:18:48.596820"
+}
+2025-07-13 20:18:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:18:48.597257",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:18:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:18:48.597257",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:18:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:18:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:18:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:18:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:19:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:19:19.030426"
+}
+2025-07-13 20:19:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:19:19.030426"
+}
+2025-07-13 20:19:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:19:19.031263",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:19:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:19:19.031263",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:19:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:19:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:19:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:19:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:19:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:19:48.602876"
+}
+2025-07-13 20:19:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:19:48.602876"
+}
+2025-07-13 20:19:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:19:48.603473",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:19:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:19:48.603473",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:19:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:19:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:19:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:19:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:20:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:20:19.295151"
+}
+2025-07-13 20:20:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:20:19.295151"
+}
+2025-07-13 20:20:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:20:19.295671",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:20:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:20:19.295671",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:20:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:20:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:20:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:20:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:20:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:20:48.606168"
+}
+2025-07-13 20:20:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:20:48.606168"
+}
+2025-07-13 20:20:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:20:48.606752",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:20:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:20:48.606752",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:20:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:20:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:20:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:20:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:21:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:21:19.010095"
+}
+2025-07-13 20:21:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:21:19.010095"
+}
+2025-07-13 20:21:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:21:19.010869",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:21:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:21:19.010869",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:21:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:21:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:21:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:21:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:21:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:21:48.596803"
+}
+2025-07-13 20:21:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:21:48.596803"
+}
+2025-07-13 20:21:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:21:48.597645",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:21:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:21:48.597645",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:21:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:21:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:21:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:21:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:22:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:22:19.233764"
+}
+2025-07-13 20:22:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:22:19.233764"
+}
+2025-07-13 20:22:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:22:19.234570",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:22:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:22:19.234570",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:22:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:22:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:22:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:22:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:22:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:22:48.601967"
+}
+2025-07-13 20:22:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:22:48.601967"
+}
+2025-07-13 20:22:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:22:48.602841",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:22:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:22:48.602841",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:22:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:22:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:22:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:22:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:23:16 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:23:16.075147"
+}
+2025-07-13 20:23:16 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:23:16.075147"
+}
+2025-07-13 20:23:16 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T20:23:16.076763"
+}
+2025-07-13 20:23:16 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T20:23:16.076763"
+}
+2025-07-13 20:23:16 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:23:16] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 20:23:16 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:23:16] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 20:23:16 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:23:16.119621",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，"
+      },
+      {
+        "role": "assistant",
+        "content": "为你提供帮助！问题"
+      },
+      {
+        "role": "user",
+        "content": "你是谁"
+      },
+      {
+        "role": "assistant",
+        "content": "有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。"
+      },
+      {
+        "role": "user",
+        "content": "你是谁？"
+      },
+      {
+        "role": "assistant",
+        "content": "的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答诚实、无害的回答。"
+      },
+      {
+        "role": "user",
+        "content": "发生是什么了"
+      }
+    ],
+    "settings": {
+      "temperature": 0,
+      "top_p": 0.95,
+      "gen_length": 88,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 20:23:16 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:23:16.119621",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，"
+      },
+      {
+        "role": "assistant",
+        "content": "为你提供帮助！问题"
+      },
+      {
+        "role": "user",
+        "content": "你是谁"
+      },
+      {
+        "role": "assistant",
+        "content": "有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。"
+      },
+      {
+        "role": "user",
+        "content": "你是谁？"
+      },
+      {
+        "role": "assistant",
+        "content": "的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答诚实、无害的回答。"
+      },
+      {
+        "role": "user",
+        "content": "发生是什么了"
+      }
+    ],
+    "settings": {
+      "temperature": 0,
+      "top_p": 0.95,
+      "gen_length": 88,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 20:23:16 - INFO - [server.py:429] - [req_1752409396120] 收到生成请求
+2025-07-13 20:23:16 - INFO - [server.py:429] - [req_1752409396120] 收到生成请求
+2025-07-13 20:23:16 - INFO - [server.py:437] - [req_1752409396120] 请求数据详情:
+2025-07-13 20:23:16 - INFO - [server.py:437] - [req_1752409396120] 请求数据详情:
+2025-07-13 20:23:16 - INFO - [server.py:438] - [req_1752409396120] - 消息数量: 7
+2025-07-13 20:23:16 - INFO - [server.py:438] - [req_1752409396120] - 消息数量: 7
+2025-07-13 20:23:16 - INFO - [server.py:439] - [req_1752409396120] - 设置参数: {
+  "temperature": 0,
+  "top_p": 0.95,
+  "gen_length": 88,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:23:16 - INFO - [server.py:439] - [req_1752409396120] - 设置参数: {
+  "temperature": 0,
+  "top_p": 0.95,
+  "gen_length": 88,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:23:16 - DEBUG - [server.py:440] - [req_1752409396120] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好，"
+  },
+  {
+    "role": "assistant",
+    "content": "为你提供帮助！问题"
+  },
+  {
+    "role": "user",
+    "content": "你是谁"
+  },
+  {
+    "role": "assistant",
+    "content": "有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。"
+  },
+  {
+    "role": "user",
+    "content": "你是谁？"
+  },
+  {
+    "role": "assistant",
+    "content": "的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答诚实、无害的回答。"
+  },
+  {
+    "role": "user",
+    "content": "发生是什么了"
+  }
+]
+2025-07-13 20:23:16 - INFO - [server.py:451] - [req_1752409396120] 开始生成响应...
+2025-07-13 20:23:16 - INFO - [server.py:451] - [req_1752409396120] 开始生成响应...
+2025-07-13 20:23:16 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:23:16 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:23:16 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:23:16 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:23:16 - INFO - [server.py:203] - 输入消息数量: 7
+2025-07-13 20:23:16 - INFO - [server.py:203] - 输入消息数量: 7
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=3
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=3
+2025-07-13 20:23:16 - DEBUG - [server.py:206] - 消息 1 内容: 你好，
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=9
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=9
+2025-07-13 20:23:16 - DEBUG - [server.py:206] - 消息 2 内容: 为你提供帮助！问题
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=3
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=3
+2025-07-13 20:23:16 - DEBUG - [server.py:206] - 消息 3 内容: 你是谁
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 4: 角色=assistant, 内容长度=35
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 4: 角色=assistant, 内容长度=35
+2025-07-13 20:23:16 - DEBUG - [server.py:206] - 消息 4 内容: 有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 5: 角色=user, 内容长度=4
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 5: 角色=user, 内容长度=4
+2025-07-13 20:23:16 - DEBUG - [server.py:206] - 消息 5 内容: 你是谁？
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 6: 角色=assistant, 内容长度=36
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 6: 角色=assistant, 内容长度=36
+2025-07-13 20:23:16 - DEBUG - [server.py:206] - 消息 6 内容: 的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答诚实、无害的回答。
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 7: 角色=user, 内容长度=6
+2025-07-13 20:23:16 - INFO - [server.py:205] - 消息 7: 角色=user, 内容长度=6
+2025-07-13 20:23:16 - DEBUG - [server.py:206] - 消息 7 内容: 发生是什么了
+2025-07-13 20:23:16 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0,
+  "top_p": 0.95,
+  "gen_length": 88,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:23:16 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0,
+  "top_p": 0.95,
+  "gen_length": 88,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:23:16 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 20:23:16 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 20:23:16 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 20:23:16 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 20:23:16 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:23:16 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:23:16 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好，<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+为你提供帮助！问题<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+你是谁<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+你是谁？<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答诚实、无害的回答。<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+发生是什么了<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 20:23:16 - INFO - [server.py:234] - 输入token数量: 97
+2025-07-13 20:23:16 - INFO - [server.py:234] - 输入token数量: 97
+2025-07-13 20:23:16 - INFO - [server.py:241] - 序列总长度: 185, prompt长度: 97, 生成长度: 88
+2025-07-13 20:23:16 - INFO - [server.py:241] - 序列总长度: 185, prompt长度: 97, 生成长度: 88
+2025-07-13 20:23:16 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 20:23:16 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 20:23:16 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=3, 每块步数=10
+2025-07-13 20:23:16 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=3, 每块步数=10
+2025-07-13 20:23:16 - INFO - [server.py:274] - 处理第 1/3 块...
+2025-07-13 20:23:16 - INFO - [server.py:274] - 处理第 1/3 块...
+2025-07-13 20:23:16 - INFO - [server.py:274] - 处理第 2/3 块...
+2025-07-13 20:23:16 - INFO - [server.py:274] - 处理第 2/3 块...
+2025-07-13 20:23:16 - INFO - [server.py:274] - 处理第 3/3 块...
+2025-07-13 20:23:16 - INFO - [server.py:274] - 处理第 3/3 块...
+2025-07-13 20:23:16 - INFO - [server.py:381] - 生成后GPU内存使用: 19.79GB
+2025-07-13 20:23:16 - INFO - [server.py:381] - 生成后GPU内存使用: 19.79GB
+2025-07-13 20:23:16 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:23:16 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:23:16 - INFO - [server.py:384] - 响应文本长度: 44
+2025-07-13 20:23:16 - INFO - [server.py:384] - 响应文本长度: 44
+2025-07-13 20:23:16 - INFO - [server.py:385] - 可视化步骤数: 11
+2025-07-13 20:23:16 - INFO - [server.py:385] - 可视化步骤数: 11
+2025-07-13 20:23:16 - INFO - [server.py:386] - 生成耗时: 0.60秒
+2025-07-13 20:23:16 - INFO - [server.py:386] - 生成耗时: 0.60秒
+2025-07-13 20:23:16 - DEBUG - [server.py:387] - 生成的响应文本: :：
+的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答有帮助的回答诚实、无害的回答
+2025-07-13 20:23:16 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:23:16 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:23:16 - INFO - [server.py:460] - [req_1752409396120] 生成成功!
+2025-07-13 20:23:16 - INFO - [server.py:460] - [req_1752409396120] 生成成功!
+2025-07-13 20:23:16 - INFO - [server.py:461] - [req_1752409396120] 响应长度: 44
+2025-07-13 20:23:16 - INFO - [server.py:461] - [req_1752409396120] 响应长度: 44
+2025-07-13 20:23:16 - INFO - [server.py:462] - [req_1752409396120] 可视化步骤: 11
+2025-07-13 20:23:16 - INFO - [server.py:462] - [req_1752409396120] 可视化步骤: 11
+2025-07-13 20:23:16 - INFO - [server.py:463] - [req_1752409396120] 总耗时: 0.61秒
+2025-07-13 20:23:16 - INFO - [server.py:463] - [req_1752409396120] 总耗时: 0.61秒
+2025-07-13 20:23:16 - DEBUG - [server.py:464] - [req_1752409396120] 响应文本: :：
+的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答有帮助的回答诚实、无害的回答
+2025-07-13 20:23:16 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 21395,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:23:16.730723"
+}
+2025-07-13 20:23:16 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 21395,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:23:16.730723"
+}
+2025-07-13 20:23:16 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:23:16] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:23:16 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:23:16] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:23:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:23:19.149357"
+}
+2025-07-13 20:23:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:23:19.149357"
+}
+2025-07-13 20:23:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:23:19.150145",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:23:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:23:19.150145",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:23:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:23:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:23:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:23:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:23:26 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:23:26.289809"
+}
+2025-07-13 20:23:26 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:23:26.289809"
+}
+2025-07-13 20:23:26 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T20:23:26.290790"
+}
+2025-07-13 20:23:26 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T20:23:26.290790"
+}
+2025-07-13 20:23:26 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:23:26] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 20:23:26 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:23:26] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 20:23:26 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:23:26.745472",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，"
+      },
+      {
+        "role": "assistant",
+        "content": "为你提供帮助！问题"
+      },
+      {
+        "role": "user",
+        "content": "你是谁"
+      },
+      {
+        "role": "assistant",
+        "content": "有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。"
+      },
+      {
+        "role": "user",
+        "content": "你是谁？"
+      },
+      {
+        "role": "assistant",
+        "content": "的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答诚实、无害的回答。"
+      },
+      {
+        "role": "user",
+        "content": "发生是什么了"
+      },
+      {
+        "role": "assistant",
+        "content": ":：\n的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答有帮助的回答诚实、无害的回答"
+      },
+      {
+        "role": "user",
+        "content": "啊？"
+      }
+    ],
+    "settings": {
+      "temperature": 0,
+      "top_p": 0.95,
+      "gen_length": 88,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 20:23:26 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:23:26.745472",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，"
+      },
+      {
+        "role": "assistant",
+        "content": "为你提供帮助！问题"
+      },
+      {
+        "role": "user",
+        "content": "你是谁"
+      },
+      {
+        "role": "assistant",
+        "content": "有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。"
+      },
+      {
+        "role": "user",
+        "content": "你是谁？"
+      },
+      {
+        "role": "assistant",
+        "content": "的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答诚实、无害的回答。"
+      },
+      {
+        "role": "user",
+        "content": "发生是什么了"
+      },
+      {
+        "role": "assistant",
+        "content": ":：\n的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答有帮助的回答诚实、无害的回答"
+      },
+      {
+        "role": "user",
+        "content": "啊？"
+      }
+    ],
+    "settings": {
+      "temperature": 0,
+      "top_p": 0.95,
+      "gen_length": 88,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 20:23:26 - INFO - [server.py:429] - [req_1752409406746] 收到生成请求
+2025-07-13 20:23:26 - INFO - [server.py:429] - [req_1752409406746] 收到生成请求
+2025-07-13 20:23:26 - INFO - [server.py:437] - [req_1752409406746] 请求数据详情:
+2025-07-13 20:23:26 - INFO - [server.py:437] - [req_1752409406746] 请求数据详情:
+2025-07-13 20:23:26 - INFO - [server.py:438] - [req_1752409406746] - 消息数量: 9
+2025-07-13 20:23:26 - INFO - [server.py:438] - [req_1752409406746] - 消息数量: 9
+2025-07-13 20:23:26 - INFO - [server.py:439] - [req_1752409406746] - 设置参数: {
+  "temperature": 0,
+  "top_p": 0.95,
+  "gen_length": 88,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:23:26 - INFO - [server.py:439] - [req_1752409406746] - 设置参数: {
+  "temperature": 0,
+  "top_p": 0.95,
+  "gen_length": 88,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:23:26 - DEBUG - [server.py:440] - [req_1752409406746] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好，"
+  },
+  {
+    "role": "assistant",
+    "content": "为你提供帮助！问题"
+  },
+  {
+    "role": "user",
+    "content": "你是谁"
+  },
+  {
+    "role": "assistant",
+    "content": "有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。"
+  },
+  {
+    "role": "user",
+    "content": "你是谁？"
+  },
+  {
+    "role": "assistant",
+    "content": "的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答诚实、无害的回答。"
+  },
+  {
+    "role": "user",
+    "content": "发生是什么了"
+  },
+  {
+    "role": "assistant",
+    "content": ":：\n的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答有帮助的回答诚实、无害的回答"
+  },
+  {
+    "role": "user",
+    "content": "啊？"
+  }
+]
+2025-07-13 20:23:26 - INFO - [server.py:451] - [req_1752409406746] 开始生成响应...
+2025-07-13 20:23:26 - INFO - [server.py:451] - [req_1752409406746] 开始生成响应...
+2025-07-13 20:23:26 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:23:26 - INFO - [server.py:201] - ============================================================
+2025-07-13 20:23:26 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:23:26 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 20:23:26 - INFO - [server.py:203] - 输入消息数量: 9
+2025-07-13 20:23:26 - INFO - [server.py:203] - 输入消息数量: 9
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=3
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=3
+2025-07-13 20:23:26 - DEBUG - [server.py:206] - 消息 1 内容: 你好，
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=9
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=9
+2025-07-13 20:23:26 - DEBUG - [server.py:206] - 消息 2 内容: 为你提供帮助！问题
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=3
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=3
+2025-07-13 20:23:26 - DEBUG - [server.py:206] - 消息 3 内容: 你是谁
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 4: 角色=assistant, 内容长度=35
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 4: 角色=assistant, 内容长度=35
+2025-07-13 20:23:26 - DEBUG - [server.py:206] - 消息 4 内容: 有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 5: 角色=user, 内容长度=4
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 5: 角色=user, 内容长度=4
+2025-07-13 20:23:26 - DEBUG - [server.py:206] - 消息 5 内容: 你是谁？
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 6: 角色=assistant, 内容长度=36
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 6: 角色=assistant, 内容长度=36
+2025-07-13 20:23:26 - DEBUG - [server.py:206] - 消息 6 内容: 的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答诚实、无害的回答。
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 7: 角色=user, 内容长度=6
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 7: 角色=user, 内容长度=6
+2025-07-13 20:23:26 - DEBUG - [server.py:206] - 消息 7 内容: 发生是什么了
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 8: 角色=assistant, 内容长度=44
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 8: 角色=assistant, 内容长度=44
+2025-07-13 20:23:26 - DEBUG - [server.py:206] - 消息 8 内容: :：
+的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答有帮助的回答诚实、无害的回答
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 9: 角色=user, 内容长度=2
+2025-07-13 20:23:26 - INFO - [server.py:205] - 消息 9: 角色=user, 内容长度=2
+2025-07-13 20:23:26 - DEBUG - [server.py:206] - 消息 9 内容: 啊？
+2025-07-13 20:23:26 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0,
+  "top_p": 0.95,
+  "gen_length": 88,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:23:26 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0,
+  "top_p": 0.95,
+  "gen_length": 88,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 20:23:26 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 20:23:26 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 20:23:26 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 20:23:26 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 20:23:26 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:23:26 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 20:23:26 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好，<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+为你提供帮助！问题<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+你是谁<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+有帮助、诚实、无害的回答。如果您有任何问题或者需要帮助，可以随时问我。<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+你是谁？<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答诚实、无害的回答。<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+发生是什么了<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+:：
+的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答有帮助的回答诚实、无害的回答<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+啊？<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 20:23:26 - INFO - [server.py:234] - 输入token数量: 134
+2025-07-13 20:23:26 - INFO - [server.py:234] - 输入token数量: 134
+2025-07-13 20:23:26 - INFO - [server.py:241] - 序列总长度: 222, prompt长度: 134, 生成长度: 88
+2025-07-13 20:23:26 - INFO - [server.py:241] - 序列总长度: 222, prompt长度: 134, 生成长度: 88
+2025-07-13 20:23:26 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 20:23:26 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 20:23:26 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=3, 每块步数=10
+2025-07-13 20:23:26 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=3, 每块步数=10
+2025-07-13 20:23:26 - INFO - [server.py:274] - 处理第 1/3 块...
+2025-07-13 20:23:26 - INFO - [server.py:274] - 处理第 1/3 块...
+2025-07-13 20:23:26 - INFO - [server.py:274] - 处理第 2/3 块...
+2025-07-13 20:23:26 - INFO - [server.py:274] - 处理第 2/3 块...
+2025-07-13 20:23:26 - INFO - [server.py:274] - 处理第 3/3 块...
+2025-07-13 20:23:26 - INFO - [server.py:274] - 处理第 3/3 块...
+2025-07-13 20:23:27 - INFO - [server.py:381] - 生成后GPU内存使用: 20.76GB
+2025-07-13 20:23:27 - INFO - [server.py:381] - 生成后GPU内存使用: 20.76GB
+2025-07-13 20:23:27 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:23:27 - INFO - [server.py:383] - 生成完成!
+2025-07-13 20:23:27 - INFO - [server.py:384] - 响应文本长度: 47
+2025-07-13 20:23:27 - INFO - [server.py:384] - 响应文本长度: 47
+2025-07-13 20:23:27 - INFO - [server.py:385] - 可视化步骤数: 11
+2025-07-13 20:23:27 - INFO - [server.py:385] - 可视化步骤数: 11
+2025-07-13 20:23:27 - INFO - [server.py:386] - 生成耗时: 0.70秒
+2025-07-13 20:23:27 - INFO - [server.py:386] - 生成耗时: 0.70秒
+2025-07-13 20:23:27 - DEBUG - [server.py:387] - 生成的响应文本: :：
+的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答有帮助的回答诚实、无害的回答的回答
+2025-07-13 20:23:27 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:23:27 - INFO - [server.py:388] - ============================================================
+2025-07-13 20:23:27 - INFO - [server.py:460] - [req_1752409406746] 生成成功!
+2025-07-13 20:23:27 - INFO - [server.py:460] - [req_1752409406746] 生成成功!
+2025-07-13 20:23:27 - INFO - [server.py:461] - [req_1752409406746] 响应长度: 47
+2025-07-13 20:23:27 - INFO - [server.py:461] - [req_1752409406746] 响应长度: 47
+2025-07-13 20:23:27 - INFO - [server.py:462] - [req_1752409406746] 可视化步骤: 11
+2025-07-13 20:23:27 - INFO - [server.py:462] - [req_1752409406746] 可视化步骤: 11
+2025-07-13 20:23:27 - INFO - [server.py:463] - [req_1752409406746] 总耗时: 0.71秒
+2025-07-13 20:23:27 - INFO - [server.py:463] - [req_1752409406746] 总耗时: 0.71秒
+2025-07-13 20:23:27 - DEBUG - [server.py:464] - [req_1752409406746] 响应文本: :：
+的回答有帮助、诚实、无害的回答有帮助、诚实、无害的回答有帮助的回答诚实、无害的回答的回答
+2025-07-13 20:23:27 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 21550,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:23:27.453849"
+}
+2025-07-13 20:23:27 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 21550,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:23:27.453849"
+}
+2025-07-13 20:23:27 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:23:27] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:23:27 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:23:27] "POST /generate HTTP/1.1" 200 -
+2025-07-13 20:23:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:23:48.592526"
+}
+2025-07-13 20:23:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:23:48.592526"
+}
+2025-07-13 20:23:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:23:48.593342",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:23:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:23:48.593342",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:23:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:23:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:23:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:23:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:24:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:24:19.015655"
+}
+2025-07-13 20:24:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:24:19.015655"
+}
+2025-07-13 20:24:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:24:19.016202",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:24:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:24:19.016202",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:24:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:24:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:24:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:24:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:24:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:24:48.603651"
+}
+2025-07-13 20:24:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:24:48.603651"
+}
+2025-07-13 20:24:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:24:48.604569",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:24:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:24:48.604569",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:24:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:24:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:24:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:24:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:25:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:25:19.111082"
+}
+2025-07-13 20:25:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:25:19.111082"
+}
+2025-07-13 20:25:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:25:19.111675",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:25:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:25:19.111675",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:25:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:25:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:25:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:25:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:25:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:25:48.594094"
+}
+2025-07-13 20:25:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:25:48.594094"
+}
+2025-07-13 20:25:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:25:48.594904",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:25:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:25:48.594904",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:25:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:25:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:25:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:25:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:26:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:26:19.023621"
+}
+2025-07-13 20:26:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:26:19.023621"
+}
+2025-07-13 20:26:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:26:19.024434",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:26:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:26:19.024434",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:26:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:26:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:26:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:26:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:26:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:26:48.605145"
+}
+2025-07-13 20:26:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:26:48.605145"
+}
+2025-07-13 20:26:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:26:48.606013",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:26:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:26:48.606013",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:26:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:26:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:26:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:26:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:27:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:27:19.048666"
+}
+2025-07-13 20:27:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:27:19.048666"
+}
+2025-07-13 20:27:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:27:19.049454",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:27:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:27:19.049454",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:27:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:27:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:27:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:27:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:27:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:27:48.604025"
+}
+2025-07-13 20:27:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:27:48.604025"
+}
+2025-07-13 20:27:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:27:48.604879",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:27:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:27:48.604879",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:27:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:27:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:27:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:27:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:28:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:28:19.030841"
+}
+2025-07-13 20:28:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:28:19.030841"
+}
+2025-07-13 20:28:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:28:19.031639",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:28:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:28:19.031639",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:28:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:28:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:28:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:28:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:28:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:28:48.600564"
+}
+2025-07-13 20:28:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:28:48.600564"
+}
+2025-07-13 20:28:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:28:48.601959",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:28:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:28:48.601959",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:28:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:28:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:28:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:28:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:29:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:29:19.030663"
+}
+2025-07-13 20:29:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:29:19.030663"
+}
+2025-07-13 20:29:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:29:19.031447",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:29:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:29:19.031447",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:29:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:29:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:29:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:29:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:29:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:29:48.600814"
+}
+2025-07-13 20:29:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:29:48.600814"
+}
+2025-07-13 20:29:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:29:48.601408",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:29:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:29:48.601408",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:29:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:29:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:29:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:29:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:30:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:30:19.032258"
+}
+2025-07-13 20:30:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:30:19.032258"
+}
+2025-07-13 20:30:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:30:19.032587",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:30:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:30:19.032587",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:30:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:30:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:30:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:30:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:30:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:30:48.609256"
+}
+2025-07-13 20:30:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:30:48.609256"
+}
+2025-07-13 20:30:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:30:48.609696",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:30:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:30:48.609696",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:30:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:30:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:30:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:30:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:31:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:31:19.061859"
+}
+2025-07-13 20:31:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:31:19.061859"
+}
+2025-07-13 20:31:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:31:19.062379",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:31:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:31:19.062379",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:31:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:31:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:31:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:31:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:31:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:31:48.600519"
+}
+2025-07-13 20:31:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:31:48.600519"
+}
+2025-07-13 20:31:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:31:48.601358",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:31:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:31:48.601358",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:31:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:31:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:31:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:31:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:32:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:32:19.068659"
+}
+2025-07-13 20:32:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:32:19.068659"
+}
+2025-07-13 20:32:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:32:19.069439",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:32:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:32:19.069439",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:32:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:32:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:32:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:32:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:32:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:32:48.937260"
+}
+2025-07-13 20:32:48 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:32:48.937260"
+}
+2025-07-13 20:32:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:32:48.938083",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:32:48 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:32:48.938083",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:32:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:32:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:32:48 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:32:48] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:33:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:33:19.167209"
+}
+2025-07-13 20:33:19 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T20:33:19.167209"
+}
+2025-07-13 20:33:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:33:19.167839",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:33:19 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T20:33:19.167839",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 20:33:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:33:19] "GET /health HTTP/1.1" 200 -
+2025-07-13 20:33:19 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 20:33:19] "GET /health HTTP/1.1" 200 -

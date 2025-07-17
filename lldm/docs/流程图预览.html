@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LLaDA系统流程图预览</title>
+                Constraint[约束Token] --> Blue[🔵 蓝色<br/>固定约束]script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .diagram { margin: 20px 0; border: 1px solid #ddd; padding: 10px; }
+        h2 { color: #333; border-bottom: 2px solid #007acc; padding-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🚀 LLaDA系统流程图预览</h1>
+    
+    <h2>📋 系统整体架构流程</h2>
+    <div class="diagram">
+        <div class="mermaid">
+        graph TB
+            User[👤 用户] --> UI[🖥️ React前端界面]
+            UI --> InputArea[✏️ 消息输入]
+            UI --> SettingsPanel[⚙️ 参数设置]
+            InputArea --> APIService[🔗 API服务]
+            SettingsPanel --> APIService
+            APIService -->|HTTP POST| FlaskAPI[🌐 Flask后端]
+            FlaskAPI --> GenerateResponse[🧠 生成处理]
+            GenerateResponse --> ModelInference[🤖 LLaDA模型]
+            ModelInference --> DiffusionLoop[🔄 扩散循环]
+            DiffusionLoop --> VisualizationUpdate[🎨 可视化更新]
+            VisualizationUpdate --> ResponseReturn[📤 响应返回]
+            ResponseReturn --> UIUpdate[🔄 界面更新]
+            UIUpdate --> User
+        </div>
+    </div>
+    
+    <h2>🔄 核心算法简化流程</h2>
+    <div class="diagram">
+        <div class="mermaid">
+        flowchart TD
+            Start([开始]) --> Init[初始化序列]
+            Init --> BlockLoop{处理块}
+            BlockLoop --> StepLoop{扩散步骤}
+            StepLoop --> ModelForward[模型推理]
+            ModelForward --> TokenPredict[Token预测]
+            TokenPredict --> ConfidenceCalc[置信度计算]
+            ConfidenceCalc --> TokenSelect[Token选择]
+            TokenSelect --> ConstraintApply[约束应用]
+            ConstraintApply --> VisuUpdate[可视化更新]
+            VisuUpdate --> StepCheck{步骤完成?}
+            StepCheck -->|否| StepLoop
+            StepCheck -->|是| BlockCheck{块完成?}
+            BlockCheck -->|否| BlockLoop
+            BlockCheck -->|是| End([完成])
+        </div>
+    </div>
+    
+    <h2>🎨 置信度颜色编码</h2>
+    <div class="diagram">
+        <div class="mermaid">
+        graph LR
+            Token[生成Token] --> Conf{置信度}
+            Conf -->|< 0.3| Red[🔴 红色<br/>低置信度]
+            Conf -->|0.3-0.7| Orange[🟠 橙色<br/>中等置信度]
+            Conf -->|> 0.7| Green[🟢 绿色<br/>高置信度]
+            Red --> Display[前端显示]
+            Orange --> Display
+            Green --> Display
+            Constraint[约束Token] --> Blue[� 紫色<br/>固定约束]
+            Blue --> Display
+            Mask[掩码Token] --> Gray[⚫ 灰色<br/>待生成]
+            Gray --> Display
+        </div>
+    </div>
+    
+    <div style="margin-top: 30px; padding: 15px; background-color: #f0f8ff; border-left: 4px solid #007acc;">
+        <h3>📝 使用说明</h3>
+        <p>此页面展示了LLaDA系统的核心流程图。完整的流程图请查看 <code>docs/系统流程图.md</code> 文件。</p>
+        <p>您可以在支持Mermaid的环境中（如GitHub、GitLab、Notion等）查看完整的流程图。</p>
+    </div>
+    
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            fontFamily: 'Arial, sans-serif'
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+D ⟷ D → yes
+C ⟷ D → no
+D ⟷ D → yes
+A ⟷ A → yes
+C ⟷ C → yes
+A ⟷ C → no
+C ⟷ A → no
+C ⟷ B → no
+B ⟷ B → yes
+C ⟷ D → no
+A ⟷ A → yes
+D ⟷ B → no
+B ⟷ A → no
+A ⟷ A → yes
+D ⟷ D → yes
+B ⟷ B → yes
+C ⟷ B → no
+A ⟷ D → no
+C ⟷ A → no
+C ⟷ C → yes
+D ⟷ C → no
+D ⟷ D → yes
+D ⟷ B → no
+D ⟷ C → no
+D ⟷ B → no
+C ⟷ A → no
+C ⟷ A → no
+D ⟷ A. 3/4}, ONLY \BOXED{A → no
+B ⟷ B → yes
+A ⟷ A → yes
+D ⟷ A → no
+A ⟷ A → yes
+C ⟷ B → no
+B ⟷ B → yes
+C ⟷ A → no
+D ⟷ C → no
+B ⟷ 0 → no
+C ⟷ C → yes
+B ⟷ B → yes
+A ⟷ A → yes
+D ⟷ D → yes
+A ⟷ A → yes
+D ⟷ A → no
+B ⟷ C. 800 → no
+C ⟷ B → no
+A ⟷ C → no
+A ⟷ A. 3/4}, ONLY \BOXED{A → no
+D ⟷ B → no
+D ⟷ D → yes
+Total: 49, Correct: 21, Accuracy: 42.86%

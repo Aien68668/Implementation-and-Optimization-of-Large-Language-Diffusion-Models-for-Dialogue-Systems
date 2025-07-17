@@ -1,0 +1,40 @@
+=== LLaDA 后端服务日志 ===
+启动时间: Mon Jul 14 00:46:38 CST 2025
+日志会话: 20250714_004638
+Python版本: Python 3.12.3
+工作目录: /root/LLaDA-main/lldm
+设备检测: CUDA可用: True
+==========================
+
+2025-07-14 00:46:45 - INFO - [server.py:101] - 初始化设备: cuda
+2025-07-14 00:46:45 - INFO - [server.py:101] - 初始化设备: cuda
+2025-07-14 00:46:45 - INFO - [server.py:108] - GPU总内存: 23.5GB
+2025-07-14 00:46:45 - INFO - [server.py:108] - GPU总内存: 23.5GB
+2025-07-14 00:46:45 - INFO - [server.py:111] - 开始加载tokenizer...
+2025-07-14 00:46:45 - INFO - [server.py:111] - 开始加载tokenizer...
+2025-07-14 00:46:45 - INFO - [server.py:113] - Tokenizer加载成功
+2025-07-14 00:46:45 - INFO - [server.py:113] - Tokenizer加载成功
+2025-07-14 00:46:45 - INFO - [server.py:115] - 开始加载模型...
+2025-07-14 00:46:45 - INFO - [server.py:115] - 开始加载模型...
+2025-07-14 00:46:46 - INFO - [modeling.py:991] - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-07-14 00:46:46 - INFO - [modeling.py:991] - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-07-14 00:46:46 - WARNING - [modeling.py:1114] - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2025-07-14 00:46:46 - WARNING - [modeling.py:1114] - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:02,  1.89it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:01<00:02,  1.62it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:01<00:02,  1.47it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:02<00:01,  1.44it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:03<00:00,  1.39it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:03<00:00,  1.54it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:03<00:00,  1.51it/s]
+2025-07-14 00:46:50 - INFO - [server.py:133] - 模型加载成功，设备: cuda
+2025-07-14 00:46:50 - INFO - [server.py:133] - 模型加载成功，设备: cuda
+2025-07-14 00:46:50 - INFO - [server.py:136] - GPU已分配内存: 14.9GB
+2025-07-14 00:46:50 - INFO - [server.py:136] - GPU已分配内存: 14.9GB
+2025-07-14 00:46:50 - INFO - [server.py:511] - ==================================================
+2025-07-14 00:46:50 - INFO - [server.py:511] - ==================================================
+2025-07-14 00:46:50 - INFO - [server.py:512] - 🚀 LLaDA后端服务启动
+2025-07-14 00:46:50 - INFO - [server.py:512] - 🚀 LLaDA后端服务启动
+2025-07-14 00:46:50 - INFO - [server.py:513] - 启动时间: 2025-07-14T00:46:50.526872
+2025-07-14 00:46:50 - INFO - [server.py:513] - 启动时间: 2025-07-14T00:46:50.526872
+2025-07-14 00:46:50 - INFO - [server.py:514] - Python版本: 3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]
+2025-07-14 00:46:50 - INFO - [server.py:514] - Python版本: 3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]
+Traceback (most recent call last):
+  File "/root/LLaDA-main/lldm/server.py", line 515, in <module>
+    logger.info(f"工作目录: {os.getcwd()}")
+                             ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?

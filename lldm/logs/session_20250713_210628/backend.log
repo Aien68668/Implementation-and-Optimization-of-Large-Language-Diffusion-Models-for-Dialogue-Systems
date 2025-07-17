@@ -1,0 +1,1517 @@
+=== LLaDA 后端服务日志 ===
+启动时间: Sun Jul 13 21:06:33 CST 2025
+日志会话: 20250713_210628
+Python版本: Python 3.12.3
+工作目录: /root/LLaDA-main/lldm
+设备检测: CUDA可用: True
+==========================
+
+2025-07-13 21:06:37 - INFO - [server.py:97] - 初始化设备: cuda
+2025-07-13 21:06:37 - INFO - [server.py:97] - 初始化设备: cuda
+2025-07-13 21:06:37 - INFO - [server.py:104] - GPU总内存: 23.5GB
+2025-07-13 21:06:37 - INFO - [server.py:104] - GPU总内存: 23.5GB
+2025-07-13 21:06:37 - INFO - [server.py:107] - 开始加载tokenizer...
+2025-07-13 21:06:37 - INFO - [server.py:107] - 开始加载tokenizer...
+2025-07-13 21:06:37 - INFO - [server.py:109] - Tokenizer加载成功
+2025-07-13 21:06:37 - INFO - [server.py:109] - Tokenizer加载成功
+2025-07-13 21:06:37 - INFO - [server.py:111] - 开始加载模型...
+2025-07-13 21:06:37 - INFO - [server.py:111] - 开始加载模型...
+2025-07-13 21:06:38 - INFO - [modeling.py:991] - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-07-13 21:06:38 - INFO - [modeling.py:991] - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-07-13 21:06:38 - WARNING - [modeling.py:1114] - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2025-07-13 21:06:38 - WARNING - [modeling.py:1114] - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:02,  1.92it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:01<00:02,  1.73it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:01<00:01,  1.54it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:02<00:01,  1.48it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:03<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:04<00:00,  1.48it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:04<00:00,  1.50it/s]
+2025-07-13 21:06:42 - INFO - [server.py:129] - 模型加载成功，设备: cuda
+2025-07-13 21:06:42 - INFO - [server.py:129] - 模型加载成功，设备: cuda
+2025-07-13 21:06:42 - INFO - [server.py:132] - GPU已分配内存: 14.9GB
+2025-07-13 21:06:42 - INFO - [server.py:132] - GPU已分配内存: 14.9GB
+ * Serving Flask app 'server'
+ * Debug mode: off
+2025-07-13 21:06:42 - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.17.0.3:9000
+2025-07-13 21:06:42 - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.17.0.3:9000
+2025-07-13 21:06:42 - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-07-13 21:06:42 - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-07-13 21:06:42 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "curl/7.81.0",
+  "timestamp": "2025-07-13T21:06:42.528759"
+}
+2025-07-13 21:06:42 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "curl/7.81.0",
+  "timestamp": "2025-07-13T21:06:42.528759"
+}
+2025-07-13 21:06:42 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:06:42.529188",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:06:42 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:06:42.529188",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:06:42 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:06:42] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:06:42 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:06:42] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:06:52 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T21:06:52.075190"
+}
+2025-07-13 21:06:52 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T21:06:52.075190"
+}
+2025-07-13 21:06:52 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:06:52.076176",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:06:52 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:06:52.076176",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:06:52 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:06:52] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:06:52 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:06:52] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:06:53 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T21:06:53.084873",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      }
+    ],
+    "settings": {
+      "gen_length": 16,
+      "steps": 8,
+      "temperature": 0.0,
+      "cfg_scale": 0.0
+    }
+  }
+}
+2025-07-13 21:06:53 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T21:06:53.084873",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      }
+    ],
+    "settings": {
+      "gen_length": 16,
+      "steps": 8,
+      "temperature": 0.0,
+      "cfg_scale": 0.0
+    }
+  }
+}
+2025-07-13 21:06:53 - INFO - [server.py:443] - [req_1752412013085] 收到生成请求
+2025-07-13 21:06:53 - INFO - [server.py:443] - [req_1752412013085] 收到生成请求
+2025-07-13 21:06:53 - INFO - [server.py:451] - [req_1752412013085] 请求数据详情:
+2025-07-13 21:06:53 - INFO - [server.py:451] - [req_1752412013085] 请求数据详情:
+2025-07-13 21:06:53 - INFO - [server.py:452] - [req_1752412013085] - 消息数量: 1
+2025-07-13 21:06:53 - INFO - [server.py:452] - [req_1752412013085] - 消息数量: 1
+2025-07-13 21:06:53 - INFO - [server.py:453] - [req_1752412013085] - 设置参数: {
+  "gen_length": 16,
+  "steps": 8,
+  "temperature": 0.0,
+  "cfg_scale": 0.0
+}
+2025-07-13 21:06:53 - INFO - [server.py:453] - [req_1752412013085] - 设置参数: {
+  "gen_length": 16,
+  "steps": 8,
+  "temperature": 0.0,
+  "cfg_scale": 0.0
+}
+2025-07-13 21:06:53 - DEBUG - [server.py:454] - [req_1752412013085] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好"
+  }
+]
+2025-07-13 21:06:53 - INFO - [server.py:465] - [req_1752412013085] 开始生成响应...
+2025-07-13 21:06:53 - INFO - [server.py:465] - [req_1752412013085] 开始生成响应...
+2025-07-13 21:06:53 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:06:53 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:06:53 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:06:53 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:06:53 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 21:06:53 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 21:06:53 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:06:53 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:06:53 - DEBUG - [server.py:206] - 消息 1 内容: 你好
+2025-07-13 21:06:53 - INFO - [server.py:208] - 设置参数: {
+  "gen_length": 16,
+  "steps": 8,
+  "temperature": 0.0,
+  "cfg_scale": 0.0
+}
+2025-07-13 21:06:53 - INFO - [server.py:208] - 设置参数: {
+  "gen_length": 16,
+  "steps": 8,
+  "temperature": 0.0,
+  "cfg_scale": 0.0
+}
+2025-07-13 21:06:53 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 21:06:53 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 21:06:53 - INFO - [server.py:225] - 生成前GPU内存使用: 14.93GB
+2025-07-13 21:06:53 - INFO - [server.py:225] - 生成前GPU内存使用: 14.93GB
+2025-07-13 21:06:53 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:06:53 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:06:53 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 21:06:53 - INFO - [server.py:234] - 输入token数量: 14
+2025-07-13 21:06:53 - INFO - [server.py:234] - 输入token数量: 14
+2025-07-13 21:06:53 - INFO - [server.py:241] - 序列总长度: 30, prompt长度: 14, 生成长度: 16
+2025-07-13 21:06:53 - INFO - [server.py:241] - 序列总长度: 30, prompt长度: 14, 生成长度: 16
+2025-07-13 21:06:53 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 21:06:53 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 21:06:53 - INFO - [server.py:270] - 块处理配置: 块长度=16, 块数量=1, 每块步数=8
+2025-07-13 21:06:53 - INFO - [server.py:270] - 块处理配置: 块长度=16, 块数量=1, 每块步数=8
+2025-07-13 21:06:53 - INFO - [server.py:274] - 处理第 1/1 块...
+2025-07-13 21:06:53 - INFO - [server.py:274] - 处理第 1/1 块...
+2025-07-13 21:06:53 - DEBUG - [server.py:289] - 块 1, 步骤 1/8
+2025-07-13 21:06:53 - DEBUG - [server.py:289] - 块 1, 步骤 2/8
+2025-07-13 21:06:53 - DEBUG - [server.py:289] - 块 1, 步骤 3/8
+2025-07-13 21:06:53 - DEBUG - [server.py:289] - 块 1, 步骤 4/8
+2025-07-13 21:06:53 - DEBUG - [server.py:289] - 块 1, 步骤 5/8
+2025-07-13 21:06:53 - DEBUG - [server.py:289] - 块 1, 步骤 6/8
+2025-07-13 21:06:53 - DEBUG - [server.py:289] - 块 1, 步骤 7/8
+2025-07-13 21:06:53 - DEBUG - [server.py:289] - 块 1, 步骤 8/8
+2025-07-13 21:06:53 - INFO - [server.py:395] - 生成后GPU内存使用: 15.36GB
+2025-07-13 21:06:53 - INFO - [server.py:395] - 生成后GPU内存使用: 15.36GB
+2025-07-13 21:06:53 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:06:53 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:06:53 - INFO - [server.py:398] - 响应文本长度: 17
+2025-07-13 21:06:53 - INFO - [server.py:398] - 响应文本长度: 17
+2025-07-13 21:06:53 - INFO - [server.py:399] - 可视化步骤数: 9
+2025-07-13 21:06:53 - INFO - [server.py:399] - 可视化步骤数: 9
+2025-07-13 21:06:53 - INFO - [server.py:400] - 生成耗时: 0.82秒
+2025-07-13 21:06:53 - INFO - [server.py:400] - 生成耗时: 0.82秒
+2025-07-13 21:06:53 - DEBUG - [server.py:401] - 生成的响应文本: 你好！有什么我可以可以帮助你的吗？
+2025-07-13 21:06:53 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:06:53 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:06:53 - INFO - [server.py:474] - [req_1752412013085] 生成成功!
+2025-07-13 21:06:53 - INFO - [server.py:474] - [req_1752412013085] 生成成功!
+2025-07-13 21:06:53 - INFO - [server.py:475] - [req_1752412013085] 响应长度: 17
+2025-07-13 21:06:53 - INFO - [server.py:475] - [req_1752412013085] 响应长度: 17
+2025-07-13 21:06:53 - INFO - [server.py:476] - [req_1752412013085] 可视化步骤: 9
+2025-07-13 21:06:53 - INFO - [server.py:476] - [req_1752412013085] 可视化步骤: 9
+2025-07-13 21:06:53 - INFO - [server.py:477] - [req_1752412013085] 总耗时: 0.83秒
+2025-07-13 21:06:53 - INFO - [server.py:477] - [req_1752412013085] 总耗时: 0.83秒
+2025-07-13 21:06:53 - DEBUG - [server.py:478] - [req_1752412013085] 响应文本: 你好！有什么我可以可以帮助你的吗？
+2025-07-13 21:06:53 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 3111,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:06:53.912046"
+}
+2025-07-13 21:06:53 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 3111,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:06:53.912046"
+}
+2025-07-13 21:06:53 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:06:53] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:06:53 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:06:53] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:06:54 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T21:06:54.917168",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气怎么样？"
+      }
+    ],
+    "settings": {
+      "gen_length": 12,
+      "steps": 6,
+      "temperature": 0.0,
+      "constraints": "0:今天, 2:天气, 4:很好"
+    }
+  }
+}
+2025-07-13 21:06:54 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T21:06:54.917168",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气怎么样？"
+      }
+    ],
+    "settings": {
+      "gen_length": 12,
+      "steps": 6,
+      "temperature": 0.0,
+      "constraints": "0:今天, 2:天气, 4:很好"
+    }
+  }
+}
+2025-07-13 21:06:54 - INFO - [server.py:443] - [req_1752412014917] 收到生成请求
+2025-07-13 21:06:54 - INFO - [server.py:443] - [req_1752412014917] 收到生成请求
+2025-07-13 21:06:54 - INFO - [server.py:451] - [req_1752412014917] 请求数据详情:
+2025-07-13 21:06:54 - INFO - [server.py:451] - [req_1752412014917] 请求数据详情:
+2025-07-13 21:06:54 - INFO - [server.py:452] - [req_1752412014917] - 消息数量: 1
+2025-07-13 21:06:54 - INFO - [server.py:452] - [req_1752412014917] - 消息数量: 1
+2025-07-13 21:06:54 - INFO - [server.py:453] - [req_1752412014917] - 设置参数: {
+  "gen_length": 12,
+  "steps": 6,
+  "temperature": 0.0,
+  "constraints": "0:今天, 2:天气, 4:很好"
+}
+2025-07-13 21:06:54 - INFO - [server.py:453] - [req_1752412014917] - 设置参数: {
+  "gen_length": 12,
+  "steps": 6,
+  "temperature": 0.0,
+  "constraints": "0:今天, 2:天气, 4:很好"
+}
+2025-07-13 21:06:54 - DEBUG - [server.py:454] - [req_1752412014917] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "今天天气怎么样？"
+  }
+]
+2025-07-13 21:06:54 - INFO - [server.py:465] - [req_1752412014917] 开始生成响应...
+2025-07-13 21:06:54 - INFO - [server.py:465] - [req_1752412014917] 开始生成响应...
+2025-07-13 21:06:54 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:06:54 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:06:54 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:06:54 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:06:54 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 21:06:54 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 21:06:54 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=8
+2025-07-13 21:06:54 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=8
+2025-07-13 21:06:54 - DEBUG - [server.py:206] - 消息 1 内容: 今天天气怎么样？
+2025-07-13 21:06:54 - INFO - [server.py:208] - 设置参数: {
+  "gen_length": 12,
+  "steps": 6,
+  "temperature": 0.0,
+  "constraints": "0:今天, 2:天气, 4:很好"
+}
+2025-07-13 21:06:54 - INFO - [server.py:208] - 设置参数: {
+  "gen_length": 12,
+  "steps": 6,
+  "temperature": 0.0,
+  "constraints": "0:今天, 2:天气, 4:很好"
+}
+2025-07-13 21:06:54 - INFO - [server.py:220] - 解析后的约束: {0: '今天', 2: '天气', 4: '很好'}
+2025-07-13 21:06:54 - INFO - [server.py:220] - 解析后的约束: {0: '今天', 2: '天气', 4: '很好'}
+2025-07-13 21:06:54 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:06:54 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:06:54 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:06:54 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:06:54 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+今天天气怎么样？<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 21:06:54 - INFO - [server.py:234] - 输入token数量: 17
+2025-07-13 21:06:54 - INFO - [server.py:234] - 输入token数量: 17
+2025-07-13 21:06:54 - INFO - [server.py:241] - 序列总长度: 29, prompt长度: 17, 生成长度: 12
+2025-07-13 21:06:54 - INFO - [server.py:241] - 序列总长度: 29, prompt长度: 17, 生成长度: 12
+2025-07-13 21:06:54 - INFO - [server.py:250] - 应用约束数量: 5
+2025-07-13 21:06:54 - INFO - [server.py:250] - 应用约束数量: 5
+2025-07-13 21:06:54 - DEBUG - [server.py:255] - 约束位置 0 (绝对位置 17): token_id=34808
+2025-07-13 21:06:54 - DEBUG - [server.py:255] - 约束位置 2 (绝对位置 19): token_id=220
+2025-07-13 21:06:54 - DEBUG - [server.py:255] - 约束位置 3 (绝对位置 20): token_id=13092
+2025-07-13 21:06:54 - DEBUG - [server.py:255] - 约束位置 4 (绝对位置 21): token_id=220
+2025-07-13 21:06:54 - DEBUG - [server.py:255] - 约束位置 5 (绝对位置 22): token_id=9052
+2025-07-13 21:06:54 - INFO - [server.py:270] - 块处理配置: 块长度=12, 块数量=1, 每块步数=6
+2025-07-13 21:06:54 - INFO - [server.py:270] - 块处理配置: 块长度=12, 块数量=1, 每块步数=6
+2025-07-13 21:06:54 - INFO - [server.py:274] - 处理第 1/1 块...
+2025-07-13 21:06:54 - INFO - [server.py:274] - 处理第 1/1 块...
+2025-07-13 21:06:54 - DEBUG - [server.py:289] - 块 1, 步骤 1/6
+2025-07-13 21:06:54 - DEBUG - [server.py:289] - 块 1, 步骤 2/6
+2025-07-13 21:06:55 - DEBUG - [server.py:289] - 块 1, 步骤 3/6
+2025-07-13 21:06:55 - DEBUG - [server.py:289] - 块 1, 步骤 4/6
+2025-07-13 21:06:55 - DEBUG - [server.py:289] - 块 1, 步骤 5/6
+2025-07-13 21:06:55 - DEBUG - [server.py:289] - 块 1, 步骤 6/6
+2025-07-13 21:06:55 - INFO - [server.py:395] - 生成后GPU内存使用: 15.35GB
+2025-07-13 21:06:55 - INFO - [server.py:395] - 生成后GPU内存使用: 15.35GB
+2025-07-13 21:06:55 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:06:55 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:06:55 - INFO - [server.py:398] - 响应文本长度: 22
+2025-07-13 21:06:55 - INFO - [server.py:398] - 响应文本长度: 22
+2025-07-13 21:06:55 - INFO - [server.py:399] - 可视化步骤数: 7
+2025-07-13 21:06:55 - INFO - [server.py:399] - 可视化步骤数: 7
+2025-07-13 21:06:55 - INFO - [server.py:400] - 生成耗时: 0.37秒
+2025-07-13 21:06:55 - INFO - [server.py:400] - 生成耗时: 0.37秒
+2025-07-13 21:06:55 - DEBUG - [server.py:401] - 生成的响应文本:  今天 的 天气 很好，阳光明媚，气温适宜。
+2025-07-13 21:06:55 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:06:55 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:06:55 - INFO - [server.py:474] - [req_1752412014917] 生成成功!
+2025-07-13 21:06:55 - INFO - [server.py:474] - [req_1752412014917] 生成成功!
+2025-07-13 21:06:55 - INFO - [server.py:475] - [req_1752412014917] 响应长度: 22
+2025-07-13 21:06:55 - INFO - [server.py:475] - [req_1752412014917] 响应长度: 22
+2025-07-13 21:06:55 - INFO - [server.py:476] - [req_1752412014917] 可视化步骤: 7
+2025-07-13 21:06:55 - INFO - [server.py:476] - [req_1752412014917] 可视化步骤: 7
+2025-07-13 21:06:55 - INFO - [server.py:477] - [req_1752412014917] 总耗时: 0.38秒
+2025-07-13 21:06:55 - INFO - [server.py:477] - [req_1752412014917] 总耗时: 0.38秒
+2025-07-13 21:06:55 - DEBUG - [server.py:478] - [req_1752412014917] 响应文本:  今天 的 天气 很好，阳光明媚，气温适宜。
+2025-07-13 21:06:55 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 2097,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:06:55.299125"
+}
+2025-07-13 21:06:55 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 2097,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:06:55.299125"
+}
+2025-07-13 21:06:55 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:06:55] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:06:55 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:06:55] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:07:03 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:03.886585"
+}
+2025-07-13 21:07:03 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:03.886585"
+}
+2025-07-13 21:07:03 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:07:03.887275",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:07:03 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:07:03.887275",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:07:03 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:03] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:07:03 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:03] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:07:04 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:04.429438"
+}
+2025-07-13 21:07:04 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:04.429438"
+}
+2025-07-13 21:07:04 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:07:04.430270",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:07:04 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:07:04.430270",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:07:04 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:04] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:07:04 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:04] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:07:28 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:28.746793"
+}
+2025-07-13 21:07:28 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:28.746793"
+}
+2025-07-13 21:07:28 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T21:07:28.747327"
+}
+2025-07-13 21:07:28 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T21:07:28.747327"
+}
+2025-07-13 21:07:28 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:28] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 21:07:28 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:28] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 21:07:29 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:29.475865",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 64,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 21:07:29 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:29.475865",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 64,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 21:07:29 - INFO - [server.py:443] - [req_1752412049476] 收到生成请求
+2025-07-13 21:07:29 - INFO - [server.py:443] - [req_1752412049476] 收到生成请求
+2025-07-13 21:07:29 - INFO - [server.py:451] - [req_1752412049476] 请求数据详情:
+2025-07-13 21:07:29 - INFO - [server.py:451] - [req_1752412049476] 请求数据详情:
+2025-07-13 21:07:29 - INFO - [server.py:452] - [req_1752412049476] - 消息数量: 1
+2025-07-13 21:07:29 - INFO - [server.py:452] - [req_1752412049476] - 消息数量: 1
+2025-07-13 21:07:29 - INFO - [server.py:453] - [req_1752412049476] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 64,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 21:07:29 - INFO - [server.py:453] - [req_1752412049476] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 64,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 21:07:29 - DEBUG - [server.py:454] - [req_1752412049476] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好"
+  }
+]
+2025-07-13 21:07:29 - INFO - [server.py:465] - [req_1752412049476] 开始生成响应...
+2025-07-13 21:07:29 - INFO - [server.py:465] - [req_1752412049476] 开始生成响应...
+2025-07-13 21:07:29 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:07:29 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:07:29 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:07:29 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:07:29 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 21:07:29 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 21:07:29 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:07:29 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:07:29 - DEBUG - [server.py:206] - 消息 1 内容: 你好
+2025-07-13 21:07:29 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 64,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 21:07:29 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 64,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 21:07:29 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 21:07:29 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 21:07:29 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:07:29 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:07:29 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:07:29 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:07:29 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 21:07:29 - INFO - [server.py:234] - 输入token数量: 14
+2025-07-13 21:07:29 - INFO - [server.py:234] - 输入token数量: 14
+2025-07-13 21:07:29 - INFO - [server.py:241] - 序列总长度: 78, prompt长度: 14, 生成长度: 64
+2025-07-13 21:07:29 - INFO - [server.py:241] - 序列总长度: 78, prompt长度: 14, 生成长度: 64
+2025-07-13 21:07:29 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 21:07:29 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 21:07:29 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 21:07:29 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 21:07:29 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 21:07:29 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 21:07:29 - DEBUG - [server.py:289] - 块 1, 步骤 1/16
+2025-07-13 21:07:29 - DEBUG - [server.py:289] - 块 1, 步骤 2/16
+2025-07-13 21:07:29 - DEBUG - [server.py:289] - 块 1, 步骤 3/16
+2025-07-13 21:07:29 - DEBUG - [server.py:289] - 块 1, 步骤 4/16
+2025-07-13 21:07:29 - DEBUG - [server.py:289] - 块 1, 步骤 5/16
+2025-07-13 21:07:29 - DEBUG - [server.py:289] - 块 1, 步骤 6/16
+2025-07-13 21:07:29 - DEBUG - [server.py:289] - 块 1, 步骤 7/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 1, 步骤 8/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 1, 步骤 9/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 1, 步骤 10/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 1, 步骤 11/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 1, 步骤 12/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 1, 步骤 13/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 1, 步骤 14/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 1, 步骤 15/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 1, 步骤 16/16
+2025-07-13 21:07:30 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 21:07:30 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 2, 步骤 1/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 2, 步骤 2/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 2, 步骤 3/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 2, 步骤 4/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 2, 步骤 5/16
+2025-07-13 21:07:30 - DEBUG - [server.py:289] - 块 2, 步骤 6/16
+2025-07-13 21:07:31 - DEBUG - [server.py:289] - 块 2, 步骤 7/16
+2025-07-13 21:07:31 - DEBUG - [server.py:289] - 块 2, 步骤 8/16
+2025-07-13 21:07:31 - DEBUG - [server.py:289] - 块 2, 步骤 9/16
+2025-07-13 21:07:31 - DEBUG - [server.py:289] - 块 2, 步骤 10/16
+2025-07-13 21:07:31 - DEBUG - [server.py:289] - 块 2, 步骤 11/16
+2025-07-13 21:07:31 - DEBUG - [server.py:289] - 块 2, 步骤 12/16
+2025-07-13 21:07:31 - DEBUG - [server.py:289] - 块 2, 步骤 13/16
+2025-07-13 21:07:31 - DEBUG - [server.py:289] - 块 2, 步骤 14/16
+2025-07-13 21:07:31 - DEBUG - [server.py:289] - 块 2, 步骤 15/16
+2025-07-13 21:07:31 - DEBUG - [server.py:289] - 块 2, 步骤 16/16
+2025-07-13 21:07:31 - INFO - [server.py:395] - 生成后GPU内存使用: 17.25GB
+2025-07-13 21:07:31 - INFO - [server.py:395] - 生成后GPU内存使用: 17.25GB
+2025-07-13 21:07:31 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:07:31 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:07:31 - INFO - [server.py:398] - 响应文本长度: 17
+2025-07-13 21:07:31 - INFO - [server.py:398] - 响应文本长度: 17
+2025-07-13 21:07:31 - INFO - [server.py:399] - 可视化步骤数: 33
+2025-07-13 21:07:31 - INFO - [server.py:399] - 可视化步骤数: 33
+2025-07-13 21:07:31 - INFO - [server.py:400] - 生成耗时: 2.13秒
+2025-07-13 21:07:31 - INFO - [server.py:400] - 生成耗时: 2.13秒
+2025-07-13 21:07:31 - DEBUG - [server.py:401] - 生成的响应文本: 你好！有什么有什么可以帮助你的吗？
+2025-07-13 21:07:31 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:07:31 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:07:31 - INFO - [server.py:474] - [req_1752412049476] 生成成功!
+2025-07-13 21:07:31 - INFO - [server.py:474] - [req_1752412049476] 生成成功!
+2025-07-13 21:07:31 - INFO - [server.py:475] - [req_1752412049476] 响应长度: 17
+2025-07-13 21:07:31 - INFO - [server.py:475] - [req_1752412049476] 响应长度: 17
+2025-07-13 21:07:31 - INFO - [server.py:476] - [req_1752412049476] 可视化步骤: 33
+2025-07-13 21:07:31 - INFO - [server.py:476] - [req_1752412049476] 可视化步骤: 33
+2025-07-13 21:07:31 - INFO - [server.py:477] - [req_1752412049476] 总耗时: 2.13秒
+2025-07-13 21:07:31 - INFO - [server.py:477] - [req_1752412049476] 总耗时: 2.13秒
+2025-07-13 21:07:31 - DEBUG - [server.py:478] - [req_1752412049476] 响应文本: 你好！有什么有什么可以帮助你的吗？
+2025-07-13 21:07:31 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 40365,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:07:31.610547"
+}
+2025-07-13 21:07:31 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 40365,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:07:31.610547"
+}
+2025-07-13 21:07:31 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:31] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:07:31 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:31] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:07:33 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:33.789848"
+}
+2025-07-13 21:07:33 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:33.789848"
+}
+2025-07-13 21:07:33 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:07:33.790281",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:07:33 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:07:33.790281",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:07:33 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:33] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:07:33 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:33] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:07:51 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:51.929234"
+}
+2025-07-13 21:07:51 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:51.929234"
+}
+2025-07-13 21:07:51 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T21:07:51.929825"
+}
+2025-07-13 21:07:51 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T21:07:51.929825"
+}
+2025-07-13 21:07:51 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:51] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 21:07:51 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:51] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 21:07:52 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:52.642727",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      },
+      {
+        "role": "assistant",
+        "content": "你好！有什么有什么可以帮助你的吗？"
+      },
+      {
+        "role": "user",
+        "content": "What's YOLO"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 64,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": "0:YOLO, 7:great"
+    }
+  }
+}
+2025-07-13 21:07:52 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:07:52.642727",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      },
+      {
+        "role": "assistant",
+        "content": "你好！有什么有什么可以帮助你的吗？"
+      },
+      {
+        "role": "user",
+        "content": "What's YOLO"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 64,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": "0:YOLO, 7:great"
+    }
+  }
+}
+2025-07-13 21:07:52 - INFO - [server.py:443] - [req_1752412072643] 收到生成请求
+2025-07-13 21:07:52 - INFO - [server.py:443] - [req_1752412072643] 收到生成请求
+2025-07-13 21:07:52 - INFO - [server.py:451] - [req_1752412072643] 请求数据详情:
+2025-07-13 21:07:52 - INFO - [server.py:451] - [req_1752412072643] 请求数据详情:
+2025-07-13 21:07:52 - INFO - [server.py:452] - [req_1752412072643] - 消息数量: 3
+2025-07-13 21:07:52 - INFO - [server.py:452] - [req_1752412072643] - 消息数量: 3
+2025-07-13 21:07:52 - INFO - [server.py:453] - [req_1752412072643] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 64,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": "0:YOLO, 7:great"
+}
+2025-07-13 21:07:52 - INFO - [server.py:453] - [req_1752412072643] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 64,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": "0:YOLO, 7:great"
+}
+2025-07-13 21:07:52 - DEBUG - [server.py:454] - [req_1752412072643] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好"
+  },
+  {
+    "role": "assistant",
+    "content": "你好！有什么有什么可以帮助你的吗？"
+  },
+  {
+    "role": "user",
+    "content": "What's YOLO"
+  }
+]
+2025-07-13 21:07:52 - INFO - [server.py:465] - [req_1752412072643] 开始生成响应...
+2025-07-13 21:07:52 - INFO - [server.py:465] - [req_1752412072643] 开始生成响应...
+2025-07-13 21:07:52 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:07:52 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:07:52 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:07:52 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:07:52 - INFO - [server.py:203] - 输入消息数量: 3
+2025-07-13 21:07:52 - INFO - [server.py:203] - 输入消息数量: 3
+2025-07-13 21:07:52 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:07:52 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:07:52 - DEBUG - [server.py:206] - 消息 1 内容: 你好
+2025-07-13 21:07:52 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=17
+2025-07-13 21:07:52 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=17
+2025-07-13 21:07:52 - DEBUG - [server.py:206] - 消息 2 内容: 你好！有什么有什么可以帮助你的吗？
+2025-07-13 21:07:52 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=11
+2025-07-13 21:07:52 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=11
+2025-07-13 21:07:52 - DEBUG - [server.py:206] - 消息 3 内容: What's YOLO
+2025-07-13 21:07:52 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 64,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": "0:YOLO, 7:great"
+}
+2025-07-13 21:07:52 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 64,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": "0:YOLO, 7:great"
+}
+2025-07-13 21:07:52 - INFO - [server.py:220] - 解析后的约束: {0: 'YOLO', 7: 'great'}
+2025-07-13 21:07:52 - INFO - [server.py:220] - 解析后的约束: {0: 'YOLO', 7: 'great'}
+2025-07-13 21:07:52 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:07:52 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:07:52 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:07:52 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:07:52 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+你好！有什么有什么可以帮助你的吗？<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+What's YOLO<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 21:07:52 - INFO - [server.py:234] - 输入token数量: 39
+2025-07-13 21:07:52 - INFO - [server.py:234] - 输入token数量: 39
+2025-07-13 21:07:52 - INFO - [server.py:241] - 序列总长度: 103, prompt长度: 39, 生成长度: 64
+2025-07-13 21:07:52 - INFO - [server.py:241] - 序列总长度: 103, prompt长度: 39, 生成长度: 64
+2025-07-13 21:07:52 - INFO - [server.py:250] - 应用约束数量: 3
+2025-07-13 21:07:52 - INFO - [server.py:250] - 应用约束数量: 3
+2025-07-13 21:07:52 - DEBUG - [server.py:255] - 约束位置 0 (绝对位置 39): token_id=100891
+2025-07-13 21:07:52 - DEBUG - [server.py:255] - 约束位置 1 (绝对位置 40): token_id=3251
+2025-07-13 21:07:52 - DEBUG - [server.py:255] - 约束位置 7 (绝对位置 46): token_id=1612
+2025-07-13 21:07:52 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 21:07:52 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 21:07:52 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 21:07:52 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 21:07:52 - DEBUG - [server.py:289] - 块 1, 步骤 1/16
+2025-07-13 21:07:52 - DEBUG - [server.py:289] - 块 1, 步骤 2/16
+2025-07-13 21:07:52 - DEBUG - [server.py:289] - 块 1, 步骤 3/16
+2025-07-13 21:07:52 - DEBUG - [server.py:289] - 块 1, 步骤 4/16
+2025-07-13 21:07:52 - DEBUG - [server.py:289] - 块 1, 步骤 5/16
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 1, 步骤 6/16
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 1, 步骤 7/16
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 1, 步骤 8/16
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 1, 步骤 9/16
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 1, 步骤 10/16
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 1, 步骤 11/16
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 1, 步骤 12/16
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 1, 步骤 13/16
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 1, 步骤 14/16
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 1, 步骤 15/16
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 1, 步骤 16/16
+2025-07-13 21:07:53 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 21:07:53 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 2, 步骤 1/16
+2025-07-13 21:07:53 - DEBUG - [server.py:289] - 块 2, 步骤 2/16
+2025-07-13 21:07:54 - DEBUG - [server.py:289] - 块 2, 步骤 3/16
+2025-07-13 21:07:54 - DEBUG - [server.py:289] - 块 2, 步骤 4/16
+2025-07-13 21:07:54 - DEBUG - [server.py:289] - 块 2, 步骤 5/16
+2025-07-13 21:07:54 - DEBUG - [server.py:289] - 块 2, 步骤 6/16
+2025-07-13 21:07:54 - DEBUG - [server.py:289] - 块 2, 步骤 7/16
+2025-07-13 21:07:54 - DEBUG - [server.py:289] - 块 2, 步骤 8/16
+2025-07-13 21:07:54 - DEBUG - [server.py:289] - 块 2, 步骤 9/16
+2025-07-13 21:07:54 - DEBUG - [server.py:289] - 块 2, 步骤 10/16
+2025-07-13 21:07:54 - DEBUG - [server.py:289] - 块 2, 步骤 11/16
+2025-07-13 21:07:54 - DEBUG - [server.py:289] - 块 2, 步骤 12/16
+2025-07-13 21:07:54 - DEBUG - [server.py:289] - 块 2, 步骤 13/16
+2025-07-13 21:07:54 - DEBUG - [server.py:289] - 块 2, 步骤 14/16
+2025-07-13 21:07:55 - DEBUG - [server.py:289] - 块 2, 步骤 15/16
+2025-07-13 21:07:55 - DEBUG - [server.py:289] - 块 2, 步骤 16/16
+2025-07-13 21:07:55 - INFO - [server.py:395] - 生成后GPU内存使用: 18.02GB
+2025-07-13 21:07:55 - INFO - [server.py:395] - 生成后GPU内存使用: 18.02GB
+2025-07-13 21:07:55 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:07:55 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:07:55 - INFO - [server.py:398] - 响应文本长度: 332
+2025-07-13 21:07:55 - INFO - [server.py:398] - 响应文本长度: 332
+2025-07-13 21:07:55 - INFO - [server.py:399] - 可视化步骤数: 33
+2025-07-13 21:07:55 - INFO - [server.py:399] - 可视化步骤数: 33
+2025-07-13 21:07:55 - INFO - [server.py:400] - 生成耗时: 2.59秒
+2025-07-13 21:07:55 - INFO - [server.py:400] - 生成耗时: 2.59秒
+2025-07-13 21:07:55 - DEBUG - [server.py:401] - 生成的响应文本:  YOLO stands an acronym for a great phrase that means You Only Live Once Once. It's used to encourage people to take risks to live life to the fullest and to live life to the fullest. However, it has gained a negative connotation and being associated with reckless behavior and making decisions without considering the consequences.
+2025-07-13 21:07:55 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:07:55 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:07:55 - INFO - [server.py:474] - [req_1752412072643] 生成成功!
+2025-07-13 21:07:55 - INFO - [server.py:474] - [req_1752412072643] 生成成功!
+2025-07-13 21:07:55 - INFO - [server.py:475] - [req_1752412072643] 响应长度: 332
+2025-07-13 21:07:55 - INFO - [server.py:475] - [req_1752412072643] 响应长度: 332
+2025-07-13 21:07:55 - INFO - [server.py:476] - [req_1752412072643] 可视化步骤: 33
+2025-07-13 21:07:55 - INFO - [server.py:476] - [req_1752412072643] 可视化步骤: 33
+2025-07-13 21:07:55 - INFO - [server.py:477] - [req_1752412072643] 总耗时: 2.59秒
+2025-07-13 21:07:55 - INFO - [server.py:477] - [req_1752412072643] 总耗时: 2.59秒
+2025-07-13 21:07:55 - DEBUG - [server.py:478] - [req_1752412072643] 响应文本:  YOLO stands an acronym for a great phrase that means You Only Live Once Once. It's used to encourage people to take risks to live life to the fullest and to live life to the fullest. However, it has gained a negative connotation and being associated with reckless behavior and making decisions without considering the consequences.
+2025-07-13 21:07:55 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 43695,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:07:55.237498"
+}
+2025-07-13 21:07:55 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 43695,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:07:55.237498"
+}
+2025-07-13 21:07:55 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:55] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:07:55 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:07:55] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:08:06 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:08:06.181937"
+}
+2025-07-13 21:08:06 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:08:06.181937"
+}
+2025-07-13 21:08:06 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:08:06.182776",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:08:06 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:08:06.182776",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:08:06 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:08:06] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:08:06 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:08:06] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:08:14 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:08:14.681081"
+}
+2025-07-13 21:08:14 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:08:14.681081"
+}
+2025-07-13 21:08:14 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T21:08:14.682011"
+}
+2025-07-13 21:08:14 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T21:08:14.682011"
+}
+2025-07-13 21:08:14 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:08:14] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 21:08:14 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:08:14] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 21:08:15 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:08:15.420198",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      },
+      {
+        "role": "assistant",
+        "content": "你好！有什么有什么可以帮助你的吗？"
+      },
+      {
+        "role": "user",
+        "content": "What's YOLO"
+      },
+      {
+        "role": "assistant",
+        "content": " YOLO stands an acronym for a great phrase that means You Only Live Once Once. It's used to encourage people to take risks to live life to the fullest and to live life to the fullest. However, it has gained a negative connotation and being associated with reckless behavior and making decisions without considering the consequences."
+      },
+      {
+        "role": "user",
+        "content": "What's YOLO"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 64,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": "0:YOLO, 7:great"
+    }
+  }
+}
+2025-07-13 21:08:15 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:08:15.420198",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      },
+      {
+        "role": "assistant",
+        "content": "你好！有什么有什么可以帮助你的吗？"
+      },
+      {
+        "role": "user",
+        "content": "What's YOLO"
+      },
+      {
+        "role": "assistant",
+        "content": " YOLO stands an acronym for a great phrase that means You Only Live Once Once. It's used to encourage people to take risks to live life to the fullest and to live life to the fullest. However, it has gained a negative connotation and being associated with reckless behavior and making decisions without considering the consequences."
+      },
+      {
+        "role": "user",
+        "content": "What's YOLO"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 64,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": "0:YOLO, 7:great"
+    }
+  }
+}
+2025-07-13 21:08:15 - INFO - [server.py:443] - [req_1752412095421] 收到生成请求
+2025-07-13 21:08:15 - INFO - [server.py:443] - [req_1752412095421] 收到生成请求
+2025-07-13 21:08:15 - INFO - [server.py:451] - [req_1752412095421] 请求数据详情:
+2025-07-13 21:08:15 - INFO - [server.py:451] - [req_1752412095421] 请求数据详情:
+2025-07-13 21:08:15 - INFO - [server.py:452] - [req_1752412095421] - 消息数量: 5
+2025-07-13 21:08:15 - INFO - [server.py:452] - [req_1752412095421] - 消息数量: 5
+2025-07-13 21:08:15 - INFO - [server.py:453] - [req_1752412095421] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 64,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": "0:YOLO, 7:great"
+}
+2025-07-13 21:08:15 - INFO - [server.py:453] - [req_1752412095421] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 64,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": "0:YOLO, 7:great"
+}
+2025-07-13 21:08:15 - DEBUG - [server.py:454] - [req_1752412095421] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好"
+  },
+  {
+    "role": "assistant",
+    "content": "你好！有什么有什么可以帮助你的吗？"
+  },
+  {
+    "role": "user",
+    "content": "What's YOLO"
+  },
+  {
+    "role": "assistant",
+    "content": " YOLO stands an acronym for a great phrase that means You Only Live Once Once. It's used to encourage people to take risks to live life to the fullest and to live life to the fullest. However, it has gained a negative connotation and being associated with reckless behavior and making decisions without considering the consequences."
+  },
+  {
+    "role": "user",
+    "content": "What's YOLO"
+  }
+]
+2025-07-13 21:08:15 - INFO - [server.py:465] - [req_1752412095421] 开始生成响应...
+2025-07-13 21:08:15 - INFO - [server.py:465] - [req_1752412095421] 开始生成响应...
+2025-07-13 21:08:15 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:08:15 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:08:15 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:08:15 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:08:15 - INFO - [server.py:203] - 输入消息数量: 5
+2025-07-13 21:08:15 - INFO - [server.py:203] - 输入消息数量: 5
+2025-07-13 21:08:15 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:08:15 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:08:15 - DEBUG - [server.py:206] - 消息 1 内容: 你好
+2025-07-13 21:08:15 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=17
+2025-07-13 21:08:15 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=17
+2025-07-13 21:08:15 - DEBUG - [server.py:206] - 消息 2 内容: 你好！有什么有什么可以帮助你的吗？
+2025-07-13 21:08:15 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=11
+2025-07-13 21:08:15 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=11
+2025-07-13 21:08:15 - DEBUG - [server.py:206] - 消息 3 内容: What's YOLO
+2025-07-13 21:08:15 - INFO - [server.py:205] - 消息 4: 角色=assistant, 内容长度=332
+2025-07-13 21:08:15 - INFO - [server.py:205] - 消息 4: 角色=assistant, 内容长度=332
+2025-07-13 21:08:15 - DEBUG - [server.py:206] - 消息 4 内容:  YOLO stands an acronym for a great phrase that means You Only Live Once Once. It's used to encourage people to take risks to live life to the fullest and to live life to the fullest. However, it has gained a negative connotation and being associated with reckless behavior and making decisions without considering the consequences.
+2025-07-13 21:08:15 - INFO - [server.py:205] - 消息 5: 角色=user, 内容长度=11
+2025-07-13 21:08:15 - INFO - [server.py:205] - 消息 5: 角色=user, 内容长度=11
+2025-07-13 21:08:15 - DEBUG - [server.py:206] - 消息 5 内容: What's YOLO
+2025-07-13 21:08:15 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 64,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": "0:YOLO, 7:great"
+}
+2025-07-13 21:08:15 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 64,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": "0:YOLO, 7:great"
+}
+2025-07-13 21:08:15 - INFO - [server.py:220] - 解析后的约束: {0: 'YOLO', 7: 'great'}
+2025-07-13 21:08:15 - INFO - [server.py:220] - 解析后的约束: {0: 'YOLO', 7: 'great'}
+2025-07-13 21:08:15 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:08:15 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:08:15 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:08:15 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:08:15 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+你好！有什么有什么可以帮助你的吗？<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+What's YOLO<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+YOLO stands an acronym for a great phrase that means You Only Live Once Once. It's used to encourage people to take risks to live life to the fullest and to live life to the fullest. However, it has gained a negative connotation and being associated with reckless behavior and making decisions without considering the consequences.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+What's YOLO<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 21:08:15 - INFO - [server.py:234] - 输入token数量: 119
+2025-07-13 21:08:15 - INFO - [server.py:234] - 输入token数量: 119
+2025-07-13 21:08:15 - INFO - [server.py:241] - 序列总长度: 183, prompt长度: 119, 生成长度: 64
+2025-07-13 21:08:15 - INFO - [server.py:241] - 序列总长度: 183, prompt长度: 119, 生成长度: 64
+2025-07-13 21:08:15 - INFO - [server.py:250] - 应用约束数量: 3
+2025-07-13 21:08:15 - INFO - [server.py:250] - 应用约束数量: 3
+2025-07-13 21:08:15 - DEBUG - [server.py:255] - 约束位置 0 (绝对位置 119): token_id=100891
+2025-07-13 21:08:15 - DEBUG - [server.py:255] - 约束位置 1 (绝对位置 120): token_id=3251
+2025-07-13 21:08:15 - DEBUG - [server.py:255] - 约束位置 7 (绝对位置 126): token_id=1612
+2025-07-13 21:08:15 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 21:08:15 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 21:08:15 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 21:08:15 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 21:08:15 - DEBUG - [server.py:289] - 块 1, 步骤 1/16
+2025-07-13 21:08:15 - DEBUG - [server.py:289] - 块 1, 步骤 2/16
+2025-07-13 21:08:15 - DEBUG - [server.py:289] - 块 1, 步骤 3/16
+2025-07-13 21:08:15 - DEBUG - [server.py:289] - 块 1, 步骤 4/16
+2025-07-13 21:08:15 - DEBUG - [server.py:289] - 块 1, 步骤 5/16
+2025-07-13 21:08:16 - DEBUG - [server.py:289] - 块 1, 步骤 6/16
+2025-07-13 21:08:16 - DEBUG - [server.py:289] - 块 1, 步骤 7/16
+2025-07-13 21:08:16 - DEBUG - [server.py:289] - 块 1, 步骤 8/16
+2025-07-13 21:08:16 - DEBUG - [server.py:289] - 块 1, 步骤 9/16
+2025-07-13 21:08:16 - DEBUG - [server.py:289] - 块 1, 步骤 10/16
+2025-07-13 21:08:16 - DEBUG - [server.py:289] - 块 1, 步骤 11/16
+2025-07-13 21:08:16 - DEBUG - [server.py:289] - 块 1, 步骤 12/16
+2025-07-13 21:08:16 - DEBUG - [server.py:289] - 块 1, 步骤 13/16
+2025-07-13 21:08:16 - DEBUG - [server.py:289] - 块 1, 步骤 14/16
+2025-07-13 21:08:17 - DEBUG - [server.py:289] - 块 1, 步骤 15/16
+2025-07-13 21:08:17 - DEBUG - [server.py:289] - 块 1, 步骤 16/16
+2025-07-13 21:08:17 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 21:08:17 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 21:08:17 - DEBUG - [server.py:289] - 块 2, 步骤 1/16
+2025-07-13 21:08:17 - ERROR - [server.py:411] - 生成过程中发生错误!
+2025-07-13 21:08:17 - ERROR - [server.py:411] - 生成过程中发生错误!
+2025-07-13 21:08:17 - ERROR - [server.py:412] - 错误类型: OutOfMemoryError
+2025-07-13 21:08:17 - ERROR - [server.py:412] - 错误类型: OutOfMemoryError
+2025-07-13 21:08:17 - ERROR - [server.py:413] - 错误信息: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 
+2025-07-13 21:08:17 - ERROR - [server.py:413] - 错误信息: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 
+2025-07-13 21:08:17 - ERROR - [server.py:414] - 错误发生时间: 2025-07-13T21:08:17.267570
+2025-07-13 21:08:17 - ERROR - [server.py:414] - 错误发生时间: 2025-07-13T21:08:17.267570
+2025-07-13 21:08:17 - ERROR - [server.py:415] - 生成耗时(至错误): 1.85秒
+2025-07-13 21:08:17 - ERROR - [server.py:415] - 生成耗时(至错误): 1.85秒
+2025-07-13 21:08:17 - ERROR - [server.py:416] - 输入消息数量: 5
+2025-07-13 21:08:17 - ERROR - [server.py:416] - 输入消息数量: 5
+2025-07-13 21:08:17 - ERROR - [server.py:417] - 设置参数: {"temperature": 0.7, "top_p": 0.95, "gen_length": 64, "num_beams": 4, "steps": 32, "cfg_scale": 1, "constraints": "0:YOLO, 7:great"}
+2025-07-13 21:08:17 - ERROR - [server.py:417] - 设置参数: {"temperature": 0.7, "top_p": 0.95, "gen_length": 64, "num_beams": 4, "steps": 32, "cfg_scale": 1, "constraints": "0:YOLO, 7:great"}
+2025-07-13 21:08:17 - ERROR - [server.py:418] - 详细错误堆栈:
+2025-07-13 21:08:17 - ERROR - [server.py:418] - 详细错误堆栈:
+2025-07-13 21:08:17 - ERROR - [server.py:419] - Traceback (most recent call last):
+  File "/root/LLaDA-main/lldm/server.py", line 301, in generate_response
+    logits = model(x_).logits
+             ^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/modules/transformers_modules/model/modeling_llada.py", line 1418, in forward
+    outputs = self.model.forward(
+              ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/modules/transformers_modules/model/modeling_llada.py", line 1315, in forward
+    x, cache = block(x, attention_bias=attention_bias, layer_past=layer_past, use_cache=use_cache)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/modules/transformers_modules/model/modeling_llada.py", line 929, in forward
+    x = x * x_up # new add
+        ~~^~~~~~
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 
+
+2025-07-13 21:08:17 - ERROR - [server.py:419] - Traceback (most recent call last):
+  File "/root/LLaDA-main/lldm/server.py", line 301, in generate_response
+    logits = model(x_).logits
+             ^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/modules/transformers_modules/model/modeling_llada.py", line 1418, in forward
+    outputs = self.model.forward(
+              ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/modules/transformers_modules/model/modeling_llada.py", line 1315, in forward
+    x, cache = block(x, attention_bias=attention_bias, layer_past=layer_past, use_cache=use_cache)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/modules/transformers_modules/model/modeling_llada.py", line 929, in forward
+    x = x * x_up # new add
+        ~~^~~~~~
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 
+
+2025-07-13 21:08:17 - INFO - [server.py:420] - ============================================================
+2025-07-13 21:08:17 - INFO - [server.py:420] - ============================================================
+2025-07-13 21:08:17 - ERROR - [server.py:492] - [req_1752412095421] 生成过程中发生错误!
+2025-07-13 21:08:17 - ERROR - [server.py:492] - [req_1752412095421] 生成过程中发生错误!
+2025-07-13 21:08:17 - ERROR - [server.py:493] - [req_1752412095421] 错误类型: OutOfMemoryError
+2025-07-13 21:08:17 - ERROR - [server.py:493] - [req_1752412095421] 错误类型: OutOfMemoryError
+2025-07-13 21:08:17 - ERROR - [server.py:494] - [req_1752412095421] 错误信息: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 
+2025-07-13 21:08:17 - ERROR - [server.py:494] - [req_1752412095421] 错误信息: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 
+2025-07-13 21:08:17 - ERROR - [server.py:495] - [req_1752412095421] 错误耗时: 1.85秒
+2025-07-13 21:08:17 - ERROR - [server.py:495] - [req_1752412095421] 错误耗时: 1.85秒
+2025-07-13 21:08:17 - ERROR - [server.py:496] - [req_1752412095421] 错误堆栈:
+2025-07-13 21:08:17 - ERROR - [server.py:496] - [req_1752412095421] 错误堆栈:
+2025-07-13 21:08:17 - ERROR - [server.py:497] - Traceback (most recent call last):
+  File "/root/LLaDA-main/lldm/server.py", line 468, in generate
+    response_text, visualization = generate_response(messages, settings)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/LLaDA-main/lldm/server.py", line 427, in generate_response
+    raise e
+  File "/root/LLaDA-main/lldm/server.py", line 301, in generate_response
+    logits = model(x_).logits
+             ^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/modules/transformers_modules/model/modeling_llada.py", line 1418, in forward
+    outputs = self.model.forward(
+              ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/modules/transformers_modules/model/modeling_llada.py", line 1315, in forward
+    x, cache = block(x, attention_bias=attention_bias, layer_past=layer_past, use_cache=use_cache)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/modules/transformers_modules/model/modeling_llada.py", line 929, in forward
+    x = x * x_up # new add
+        ~~^~~~~~
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 
+
+2025-07-13 21:08:17 - ERROR - [server.py:497] - Traceback (most recent call last):
+  File "/root/LLaDA-main/lldm/server.py", line 468, in generate
+    response_text, visualization = generate_response(messages, settings)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/LLaDA-main/lldm/server.py", line 427, in generate_response
+    raise e
+  File "/root/LLaDA-main/lldm/server.py", line 301, in generate_response
+    logits = model(x_).logits
+             ^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/modules/transformers_modules/model/modeling_llada.py", line 1418, in forward
+    outputs = self.model.forward(
+              ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/modules/transformers_modules/model/modeling_llada.py", line 1315, in forward
+    x, cache = block(x, attention_bias=attention_bias, layer_past=layer_past, use_cache=use_cache)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/modules/transformers_modules/model/modeling_llada.py", line 929, in forward
+    x = x * x_up # new add
+        ~~^~~~~~
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 
+
+2025-07-13 21:08:17 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 500,
+  "content_length": 131,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:08:17.271052",
+  "response_body": "{\"error\":\"CUDA out of memory. Tried to allocate 20.00 MiB. GPU \",\"error_type\":\"OutOfMemoryError\",\"request_id\":\"req_1752412095421\"}\n"
+}
+2025-07-13 21:08:17 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 500,
+  "content_length": 131,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:08:17.271052",
+  "response_body": "{\"error\":\"CUDA out of memory. Tried to allocate 20.00 MiB. GPU \",\"error_type\":\"OutOfMemoryError\",\"request_id\":\"req_1752412095421\"}\n"
+}
+2025-07-13 21:08:17 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:08:17] "[35m[1mPOST /generate HTTP/1.1[0m" 500 -
+2025-07-13 21:08:17 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:08:17] "[35m[1mPOST /generate HTTP/1.1[0m" 500 -
+2025-07-13 21:08:34 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:08:34.669102"
+}
+2025-07-13 21:08:34 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:08:34.669102"
+}
+2025-07-13 21:08:34 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:08:34.669774",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:08:34 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:08:34.669774",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:08:34 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:08:34] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:08:34 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:08:34] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:09:04 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:09:04.616228"
+}
+2025-07-13 21:09:04 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:09:04.616228"
+}
+2025-07-13 21:09:04 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:09:04.616762",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:09:04 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:09:04.616762",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:09:04 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:09:04] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:09:04 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:09:04] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:09:33 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:09:33.992847"
+}
+2025-07-13 21:09:33 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:09:33.992847"
+}
+2025-07-13 21:09:33 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:09:33.993655",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:09:33 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:09:33.993655",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:09:33 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:09:33] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:09:33 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:09:33] "GET /health HTTP/1.1" 200 -

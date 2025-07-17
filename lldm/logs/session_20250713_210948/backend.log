@@ -1,0 +1,4013 @@
+=== LLaDA 后端服务日志 ===
+启动时间: Sun Jul 13 21:09:53 CST 2025
+日志会话: 20250713_210948
+Python版本: Python 3.12.3
+工作目录: /root/LLaDA-main/lldm
+设备检测: CUDA可用: True
+==========================
+
+2025-07-13 21:09:56 - INFO - [server.py:97] - 初始化设备: cuda
+2025-07-13 21:09:56 - INFO - [server.py:97] - 初始化设备: cuda
+2025-07-13 21:09:56 - INFO - [server.py:104] - GPU总内存: 23.5GB
+2025-07-13 21:09:56 - INFO - [server.py:104] - GPU总内存: 23.5GB
+2025-07-13 21:09:56 - INFO - [server.py:107] - 开始加载tokenizer...
+2025-07-13 21:09:56 - INFO - [server.py:107] - 开始加载tokenizer...
+2025-07-13 21:09:57 - INFO - [server.py:109] - Tokenizer加载成功
+2025-07-13 21:09:57 - INFO - [server.py:109] - Tokenizer加载成功
+2025-07-13 21:09:57 - INFO - [server.py:111] - 开始加载模型...
+2025-07-13 21:09:57 - INFO - [server.py:111] - 开始加载模型...
+2025-07-13 21:09:58 - INFO - [modeling.py:991] - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-07-13 21:09:58 - INFO - [modeling.py:991] - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-07-13 21:09:58 - WARNING - [modeling.py:1114] - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2025-07-13 21:09:58 - WARNING - [modeling.py:1114] - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:02,  1.91it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:01<00:02,  1.61it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:02<00:02,  1.43it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:02<00:01,  1.34it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:03<00:00,  1.29it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:04<00:00,  1.43it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:04<00:00,  1.43it/s]
+2025-07-13 21:10:02 - INFO - [server.py:129] - 模型加载成功，设备: cuda
+2025-07-13 21:10:02 - INFO - [server.py:129] - 模型加载成功，设备: cuda
+2025-07-13 21:10:02 - INFO - [server.py:132] - GPU已分配内存: 14.9GB
+2025-07-13 21:10:02 - INFO - [server.py:132] - GPU已分配内存: 14.9GB
+ * Serving Flask app 'server'
+ * Debug mode: off
+2025-07-13 21:10:02 - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.17.0.3:9000
+2025-07-13 21:10:02 - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.17.0.3:9000
+2025-07-13 21:10:02 - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-07-13 21:10:02 - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-07-13 21:10:03 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "curl/7.81.0",
+  "timestamp": "2025-07-13T21:10:03.475541"
+}
+2025-07-13 21:10:03 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "curl/7.81.0",
+  "timestamp": "2025-07-13T21:10:03.475541"
+}
+2025-07-13 21:10:03 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:03.476515",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:10:03 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:03.476515",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:10:03 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:03] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:10:03 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:03] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:10:08 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T21:10:08.553290"
+}
+2025-07-13 21:10:08 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T21:10:08.553290"
+}
+2025-07-13 21:10:08 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:08.554190",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:10:08 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:08.554190",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:10:08 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:08] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:10:08 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:08] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:10:09 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T21:10:09.562442",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      }
+    ],
+    "settings": {
+      "gen_length": 16,
+      "steps": 8,
+      "temperature": 0.0,
+      "cfg_scale": 0.0
+    }
+  }
+}
+2025-07-13 21:10:09 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T21:10:09.562442",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      }
+    ],
+    "settings": {
+      "gen_length": 16,
+      "steps": 8,
+      "temperature": 0.0,
+      "cfg_scale": 0.0
+    }
+  }
+}
+2025-07-13 21:10:09 - INFO - [server.py:443] - [req_1752412209563] 收到生成请求
+2025-07-13 21:10:09 - INFO - [server.py:443] - [req_1752412209563] 收到生成请求
+2025-07-13 21:10:09 - INFO - [server.py:451] - [req_1752412209563] 请求数据详情:
+2025-07-13 21:10:09 - INFO - [server.py:451] - [req_1752412209563] 请求数据详情:
+2025-07-13 21:10:09 - INFO - [server.py:452] - [req_1752412209563] - 消息数量: 1
+2025-07-13 21:10:09 - INFO - [server.py:452] - [req_1752412209563] - 消息数量: 1
+2025-07-13 21:10:09 - INFO - [server.py:453] - [req_1752412209563] - 设置参数: {
+  "gen_length": 16,
+  "steps": 8,
+  "temperature": 0.0,
+  "cfg_scale": 0.0
+}
+2025-07-13 21:10:09 - INFO - [server.py:453] - [req_1752412209563] - 设置参数: {
+  "gen_length": 16,
+  "steps": 8,
+  "temperature": 0.0,
+  "cfg_scale": 0.0
+}
+2025-07-13 21:10:09 - DEBUG - [server.py:454] - [req_1752412209563] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好"
+  }
+]
+2025-07-13 21:10:09 - INFO - [server.py:465] - [req_1752412209563] 开始生成响应...
+2025-07-13 21:10:09 - INFO - [server.py:465] - [req_1752412209563] 开始生成响应...
+2025-07-13 21:10:09 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:10:09 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:10:09 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:10:09 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:10:09 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 21:10:09 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 21:10:09 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:10:09 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:10:09 - DEBUG - [server.py:206] - 消息 1 内容: 你好
+2025-07-13 21:10:09 - INFO - [server.py:208] - 设置参数: {
+  "gen_length": 16,
+  "steps": 8,
+  "temperature": 0.0,
+  "cfg_scale": 0.0
+}
+2025-07-13 21:10:09 - INFO - [server.py:208] - 设置参数: {
+  "gen_length": 16,
+  "steps": 8,
+  "temperature": 0.0,
+  "cfg_scale": 0.0
+}
+2025-07-13 21:10:09 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 21:10:09 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 21:10:09 - INFO - [server.py:225] - 生成前GPU内存使用: 14.93GB
+2025-07-13 21:10:09 - INFO - [server.py:225] - 生成前GPU内存使用: 14.93GB
+2025-07-13 21:10:09 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:10:09 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:10:09 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 21:10:09 - INFO - [server.py:234] - 输入token数量: 14
+2025-07-13 21:10:09 - INFO - [server.py:234] - 输入token数量: 14
+2025-07-13 21:10:09 - INFO - [server.py:241] - 序列总长度: 30, prompt长度: 14, 生成长度: 16
+2025-07-13 21:10:09 - INFO - [server.py:241] - 序列总长度: 30, prompt长度: 14, 生成长度: 16
+2025-07-13 21:10:09 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 21:10:09 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 21:10:09 - INFO - [server.py:270] - 块处理配置: 块长度=16, 块数量=1, 每块步数=8
+2025-07-13 21:10:09 - INFO - [server.py:270] - 块处理配置: 块长度=16, 块数量=1, 每块步数=8
+2025-07-13 21:10:09 - INFO - [server.py:274] - 处理第 1/1 块...
+2025-07-13 21:10:09 - INFO - [server.py:274] - 处理第 1/1 块...
+2025-07-13 21:10:09 - DEBUG - [server.py:289] - 块 1, 步骤 1/8
+2025-07-13 21:10:09 - DEBUG - [server.py:289] - 块 1, 步骤 2/8
+2025-07-13 21:10:10 - DEBUG - [server.py:289] - 块 1, 步骤 3/8
+2025-07-13 21:10:10 - DEBUG - [server.py:289] - 块 1, 步骤 4/8
+2025-07-13 21:10:10 - DEBUG - [server.py:289] - 块 1, 步骤 5/8
+2025-07-13 21:10:10 - DEBUG - [server.py:289] - 块 1, 步骤 6/8
+2025-07-13 21:10:10 - DEBUG - [server.py:289] - 块 1, 步骤 7/8
+2025-07-13 21:10:10 - DEBUG - [server.py:289] - 块 1, 步骤 8/8
+2025-07-13 21:10:10 - INFO - [server.py:395] - 生成后GPU内存使用: 15.36GB
+2025-07-13 21:10:10 - INFO - [server.py:395] - 生成后GPU内存使用: 15.36GB
+2025-07-13 21:10:10 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:10:10 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:10:10 - INFO - [server.py:398] - 响应文本长度: 17
+2025-07-13 21:10:10 - INFO - [server.py:398] - 响应文本长度: 17
+2025-07-13 21:10:10 - INFO - [server.py:399] - 可视化步骤数: 9
+2025-07-13 21:10:10 - INFO - [server.py:399] - 可视化步骤数: 9
+2025-07-13 21:10:10 - INFO - [server.py:400] - 生成耗时: 0.80秒
+2025-07-13 21:10:10 - INFO - [server.py:400] - 生成耗时: 0.80秒
+2025-07-13 21:10:10 - DEBUG - [server.py:401] - 生成的响应文本: 你好！有什么我可以可以帮助你的吗？
+2025-07-13 21:10:10 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:10:10 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:10:10 - INFO - [server.py:474] - [req_1752412209563] 生成成功!
+2025-07-13 21:10:10 - INFO - [server.py:474] - [req_1752412209563] 生成成功!
+2025-07-13 21:10:10 - INFO - [server.py:475] - [req_1752412209563] 响应长度: 17
+2025-07-13 21:10:10 - INFO - [server.py:475] - [req_1752412209563] 响应长度: 17
+2025-07-13 21:10:10 - INFO - [server.py:476] - [req_1752412209563] 可视化步骤: 9
+2025-07-13 21:10:10 - INFO - [server.py:476] - [req_1752412209563] 可视化步骤: 9
+2025-07-13 21:10:10 - INFO - [server.py:477] - [req_1752412209563] 总耗时: 0.81秒
+2025-07-13 21:10:10 - INFO - [server.py:477] - [req_1752412209563] 总耗时: 0.81秒
+2025-07-13 21:10:10 - DEBUG - [server.py:478] - [req_1752412209563] 响应文本: 你好！有什么我可以可以帮助你的吗？
+2025-07-13 21:10:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 3111,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:10.370318"
+}
+2025-07-13 21:10:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 3111,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:10.370318"
+}
+2025-07-13 21:10:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:10] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:10:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:10] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:10:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T21:10:11.381025",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气怎么样？"
+      }
+    ],
+    "settings": {
+      "gen_length": 12,
+      "steps": 6,
+      "temperature": 0.0,
+      "constraints": "0:今天, 2:天气, 4:很好"
+    }
+  }
+}
+2025-07-13 21:10:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "python-requests/2.31.0",
+  "timestamp": "2025-07-13T21:10:11.381025",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气怎么样？"
+      }
+    ],
+    "settings": {
+      "gen_length": 12,
+      "steps": 6,
+      "temperature": 0.0,
+      "constraints": "0:今天, 2:天气, 4:很好"
+    }
+  }
+}
+2025-07-13 21:10:11 - INFO - [server.py:443] - [req_1752412211381] 收到生成请求
+2025-07-13 21:10:11 - INFO - [server.py:443] - [req_1752412211381] 收到生成请求
+2025-07-13 21:10:11 - INFO - [server.py:451] - [req_1752412211381] 请求数据详情:
+2025-07-13 21:10:11 - INFO - [server.py:451] - [req_1752412211381] 请求数据详情:
+2025-07-13 21:10:11 - INFO - [server.py:452] - [req_1752412211381] - 消息数量: 1
+2025-07-13 21:10:11 - INFO - [server.py:452] - [req_1752412211381] - 消息数量: 1
+2025-07-13 21:10:11 - INFO - [server.py:453] - [req_1752412211381] - 设置参数: {
+  "gen_length": 12,
+  "steps": 6,
+  "temperature": 0.0,
+  "constraints": "0:今天, 2:天气, 4:很好"
+}
+2025-07-13 21:10:11 - INFO - [server.py:453] - [req_1752412211381] - 设置参数: {
+  "gen_length": 12,
+  "steps": 6,
+  "temperature": 0.0,
+  "constraints": "0:今天, 2:天气, 4:很好"
+}
+2025-07-13 21:10:11 - DEBUG - [server.py:454] - [req_1752412211381] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "今天天气怎么样？"
+  }
+]
+2025-07-13 21:10:11 - INFO - [server.py:465] - [req_1752412211381] 开始生成响应...
+2025-07-13 21:10:11 - INFO - [server.py:465] - [req_1752412211381] 开始生成响应...
+2025-07-13 21:10:11 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:10:11 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:10:11 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:10:11 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:10:11 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 21:10:11 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 21:10:11 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=8
+2025-07-13 21:10:11 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=8
+2025-07-13 21:10:11 - DEBUG - [server.py:206] - 消息 1 内容: 今天天气怎么样？
+2025-07-13 21:10:11 - INFO - [server.py:208] - 设置参数: {
+  "gen_length": 12,
+  "steps": 6,
+  "temperature": 0.0,
+  "constraints": "0:今天, 2:天气, 4:很好"
+}
+2025-07-13 21:10:11 - INFO - [server.py:208] - 设置参数: {
+  "gen_length": 12,
+  "steps": 6,
+  "temperature": 0.0,
+  "constraints": "0:今天, 2:天气, 4:很好"
+}
+2025-07-13 21:10:11 - INFO - [server.py:220] - 解析后的约束: {0: '今天', 2: '天气', 4: '很好'}
+2025-07-13 21:10:11 - INFO - [server.py:220] - 解析后的约束: {0: '今天', 2: '天气', 4: '很好'}
+2025-07-13 21:10:11 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:10:11 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:10:11 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:10:11 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:10:11 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+今天天气怎么样？<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 21:10:11 - INFO - [server.py:234] - 输入token数量: 17
+2025-07-13 21:10:11 - INFO - [server.py:234] - 输入token数量: 17
+2025-07-13 21:10:11 - INFO - [server.py:241] - 序列总长度: 29, prompt长度: 17, 生成长度: 12
+2025-07-13 21:10:11 - INFO - [server.py:241] - 序列总长度: 29, prompt长度: 17, 生成长度: 12
+2025-07-13 21:10:11 - INFO - [server.py:250] - 应用约束数量: 5
+2025-07-13 21:10:11 - INFO - [server.py:250] - 应用约束数量: 5
+2025-07-13 21:10:11 - DEBUG - [server.py:255] - 约束位置 0 (绝对位置 17): token_id=34808
+2025-07-13 21:10:11 - DEBUG - [server.py:255] - 约束位置 2 (绝对位置 19): token_id=220
+2025-07-13 21:10:11 - DEBUG - [server.py:255] - 约束位置 3 (绝对位置 20): token_id=13092
+2025-07-13 21:10:11 - DEBUG - [server.py:255] - 约束位置 4 (绝对位置 21): token_id=220
+2025-07-13 21:10:11 - DEBUG - [server.py:255] - 约束位置 5 (绝对位置 22): token_id=9052
+2025-07-13 21:10:11 - INFO - [server.py:270] - 块处理配置: 块长度=12, 块数量=1, 每块步数=6
+2025-07-13 21:10:11 - INFO - [server.py:270] - 块处理配置: 块长度=12, 块数量=1, 每块步数=6
+2025-07-13 21:10:11 - INFO - [server.py:274] - 处理第 1/1 块...
+2025-07-13 21:10:11 - INFO - [server.py:274] - 处理第 1/1 块...
+2025-07-13 21:10:11 - DEBUG - [server.py:289] - 块 1, 步骤 1/6
+2025-07-13 21:10:11 - DEBUG - [server.py:289] - 块 1, 步骤 2/6
+2025-07-13 21:10:11 - DEBUG - [server.py:289] - 块 1, 步骤 3/6
+2025-07-13 21:10:11 - DEBUG - [server.py:289] - 块 1, 步骤 4/6
+2025-07-13 21:10:11 - DEBUG - [server.py:289] - 块 1, 步骤 5/6
+2025-07-13 21:10:11 - DEBUG - [server.py:289] - 块 1, 步骤 6/6
+2025-07-13 21:10:11 - INFO - [server.py:395] - 生成后GPU内存使用: 15.35GB
+2025-07-13 21:10:11 - INFO - [server.py:395] - 生成后GPU内存使用: 15.35GB
+2025-07-13 21:10:11 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:10:11 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:10:11 - INFO - [server.py:398] - 响应文本长度: 22
+2025-07-13 21:10:11 - INFO - [server.py:398] - 响应文本长度: 22
+2025-07-13 21:10:11 - INFO - [server.py:399] - 可视化步骤数: 7
+2025-07-13 21:10:11 - INFO - [server.py:399] - 可视化步骤数: 7
+2025-07-13 21:10:11 - INFO - [server.py:400] - 生成耗时: 0.32秒
+2025-07-13 21:10:11 - INFO - [server.py:400] - 生成耗时: 0.32秒
+2025-07-13 21:10:11 - DEBUG - [server.py:401] - 生成的响应文本:  今天 的 天气 很好，阳光明媚，气温适宜。
+2025-07-13 21:10:11 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:10:11 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:10:11 - INFO - [server.py:474] - [req_1752412211381] 生成成功!
+2025-07-13 21:10:11 - INFO - [server.py:474] - [req_1752412211381] 生成成功!
+2025-07-13 21:10:11 - INFO - [server.py:475] - [req_1752412211381] 响应长度: 22
+2025-07-13 21:10:11 - INFO - [server.py:475] - [req_1752412211381] 响应长度: 22
+2025-07-13 21:10:11 - INFO - [server.py:476] - [req_1752412211381] 可视化步骤: 7
+2025-07-13 21:10:11 - INFO - [server.py:476] - [req_1752412211381] 可视化步骤: 7
+2025-07-13 21:10:11 - INFO - [server.py:477] - [req_1752412211381] 总耗时: 0.32秒
+2025-07-13 21:10:11 - INFO - [server.py:477] - [req_1752412211381] 总耗时: 0.32秒
+2025-07-13 21:10:11 - DEBUG - [server.py:478] - [req_1752412211381] 响应文本:  今天 的 天气 很好，阳光明媚，气温适宜。
+2025-07-13 21:10:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 2097,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:11.706077"
+}
+2025-07-13 21:10:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 2097,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:11.706077"
+}
+2025-07-13 21:10:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:11] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:10:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:11] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:10:13 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:10:13.485073"
+}
+2025-07-13 21:10:13 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:10:13.485073"
+}
+2025-07-13 21:10:13 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:13.485909",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:10:13 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:13.485909",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:10:13 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:13] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:10:13 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:13] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:10:36 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:10:36.930280"
+}
+2025-07-13 21:10:36 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:10:36.930280"
+}
+2025-07-13 21:10:36 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T21:10:36.931021"
+}
+2025-07-13 21:10:36 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T21:10:36.931021"
+}
+2025-07-13 21:10:36 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:36] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 21:10:36 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:36] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 21:10:37 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:10:37.398892",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 50,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 21:10:37 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:10:37.398892",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 50,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 21:10:37 - INFO - [server.py:443] - [req_1752412237399] 收到生成请求
+2025-07-13 21:10:37 - INFO - [server.py:443] - [req_1752412237399] 收到生成请求
+2025-07-13 21:10:37 - INFO - [server.py:451] - [req_1752412237399] 请求数据详情:
+2025-07-13 21:10:37 - INFO - [server.py:451] - [req_1752412237399] 请求数据详情:
+2025-07-13 21:10:37 - INFO - [server.py:452] - [req_1752412237399] - 消息数量: 1
+2025-07-13 21:10:37 - INFO - [server.py:452] - [req_1752412237399] - 消息数量: 1
+2025-07-13 21:10:37 - INFO - [server.py:453] - [req_1752412237399] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 21:10:37 - INFO - [server.py:453] - [req_1752412237399] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 21:10:37 - DEBUG - [server.py:454] - [req_1752412237399] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好"
+  }
+]
+2025-07-13 21:10:37 - INFO - [server.py:465] - [req_1752412237399] 开始生成响应...
+2025-07-13 21:10:37 - INFO - [server.py:465] - [req_1752412237399] 开始生成响应...
+2025-07-13 21:10:37 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:10:37 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:10:37 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:10:37 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:10:37 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 21:10:37 - INFO - [server.py:203] - 输入消息数量: 1
+2025-07-13 21:10:37 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:10:37 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:10:37 - DEBUG - [server.py:206] - 消息 1 内容: 你好
+2025-07-13 21:10:37 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 21:10:37 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 21:10:37 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 21:10:37 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 21:10:37 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:10:37 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:10:37 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:10:37 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:10:37 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 21:10:37 - INFO - [server.py:234] - 输入token数量: 14
+2025-07-13 21:10:37 - INFO - [server.py:234] - 输入token数量: 14
+2025-07-13 21:10:37 - INFO - [server.py:241] - 序列总长度: 64, prompt长度: 14, 生成长度: 50
+2025-07-13 21:10:37 - INFO - [server.py:241] - 序列总长度: 64, prompt长度: 14, 生成长度: 50
+2025-07-13 21:10:37 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 21:10:37 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 21:10:37 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 21:10:37 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 21:10:37 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 21:10:37 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 21:10:37 - DEBUG - [server.py:289] - 块 1, 步骤 1/16
+2025-07-13 21:10:37 - DEBUG - [server.py:289] - 块 1, 步骤 2/16
+2025-07-13 21:10:37 - DEBUG - [server.py:289] - 块 1, 步骤 3/16
+2025-07-13 21:10:37 - DEBUG - [server.py:289] - 块 1, 步骤 4/16
+2025-07-13 21:10:37 - DEBUG - [server.py:289] - 块 1, 步骤 5/16
+2025-07-13 21:10:37 - DEBUG - [server.py:289] - 块 1, 步骤 6/16
+2025-07-13 21:10:37 - DEBUG - [server.py:289] - 块 1, 步骤 7/16
+2025-07-13 21:10:38 - DEBUG - [server.py:289] - 块 1, 步骤 8/16
+2025-07-13 21:10:38 - DEBUG - [server.py:289] - 块 1, 步骤 9/16
+2025-07-13 21:10:38 - DEBUG - [server.py:289] - 块 1, 步骤 10/16
+2025-07-13 21:10:38 - DEBUG - [server.py:289] - 块 1, 步骤 11/16
+2025-07-13 21:10:38 - DEBUG - [server.py:289] - 块 1, 步骤 12/16
+2025-07-13 21:10:38 - DEBUG - [server.py:289] - 块 1, 步骤 13/16
+2025-07-13 21:10:38 - DEBUG - [server.py:289] - 块 1, 步骤 14/16
+2025-07-13 21:10:38 - DEBUG - [server.py:289] - 块 1, 步骤 15/16
+2025-07-13 21:10:38 - DEBUG - [server.py:289] - 块 1, 步骤 16/16
+2025-07-13 21:10:38 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 21:10:38 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 21:10:38 - DEBUG - [server.py:289] - 块 2, 步骤 1/16
+2025-07-13 21:10:38 - DEBUG - [server.py:289] - 块 2, 步骤 2/16
+2025-07-13 21:10:38 - DEBUG - [server.py:289] - 块 2, 步骤 3/16
+2025-07-13 21:10:39 - DEBUG - [server.py:289] - 块 2, 步骤 4/16
+2025-07-13 21:10:39 - DEBUG - [server.py:289] - 块 2, 步骤 5/16
+2025-07-13 21:10:39 - DEBUG - [server.py:289] - 块 2, 步骤 6/16
+2025-07-13 21:10:39 - DEBUG - [server.py:289] - 块 2, 步骤 7/16
+2025-07-13 21:10:39 - DEBUG - [server.py:289] - 块 2, 步骤 8/16
+2025-07-13 21:10:39 - DEBUG - [server.py:289] - 块 2, 步骤 9/16
+2025-07-13 21:10:39 - DEBUG - [server.py:289] - 块 2, 步骤 10/16
+2025-07-13 21:10:39 - DEBUG - [server.py:289] - 块 2, 步骤 11/16
+2025-07-13 21:10:39 - DEBUG - [server.py:289] - 块 2, 步骤 12/16
+2025-07-13 21:10:39 - DEBUG - [server.py:289] - 块 2, 步骤 13/16
+2025-07-13 21:10:39 - DEBUG - [server.py:289] - 块 2, 步骤 14/16
+2025-07-13 21:10:39 - DEBUG - [server.py:289] - 块 2, 步骤 15/16
+2025-07-13 21:10:40 - DEBUG - [server.py:289] - 块 2, 步骤 16/16
+2025-07-13 21:10:40 - INFO - [server.py:395] - 生成后GPU内存使用: 16.83GB
+2025-07-13 21:10:40 - INFO - [server.py:395] - 生成后GPU内存使用: 16.83GB
+2025-07-13 21:10:40 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:10:40 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:10:40 - INFO - [server.py:398] - 响应文本长度: 15
+2025-07-13 21:10:40 - INFO - [server.py:398] - 响应文本长度: 15
+2025-07-13 21:10:40 - INFO - [server.py:399] - 可视化步骤数: 33
+2025-07-13 21:10:40 - INFO - [server.py:399] - 可视化步骤数: 33
+2025-07-13 21:10:40 - INFO - [server.py:400] - 生成耗时: 2.83秒
+2025-07-13 21:10:40 - INFO - [server.py:400] - 生成耗时: 2.83秒
+2025-07-13 21:10:40 - DEBUG - [server.py:401] - 生成的响应文本: 你好！有什么我可以帮助你的吗？
+2025-07-13 21:10:40 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:10:40 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:10:40 - INFO - [server.py:474] - [req_1752412237399] 生成成功!
+2025-07-13 21:10:40 - INFO - [server.py:474] - [req_1752412237399] 生成成功!
+2025-07-13 21:10:40 - INFO - [server.py:475] - [req_1752412237399] 响应长度: 15
+2025-07-13 21:10:40 - INFO - [server.py:475] - [req_1752412237399] 响应长度: 15
+2025-07-13 21:10:40 - INFO - [server.py:476] - [req_1752412237399] 可视化步骤: 33
+2025-07-13 21:10:40 - INFO - [server.py:476] - [req_1752412237399] 可视化步骤: 33
+2025-07-13 21:10:40 - INFO - [server.py:477] - [req_1752412237399] 总耗时: 2.84秒
+2025-07-13 21:10:40 - INFO - [server.py:477] - [req_1752412237399] 总耗时: 2.84秒
+2025-07-13 21:10:40 - DEBUG - [server.py:478] - [req_1752412237399] 响应文本: 你好！有什么我可以帮助你的吗？
+2025-07-13 21:10:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 31077,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:40.237066"
+}
+2025-07-13 21:10:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 31077,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:40.237066"
+}
+2025-07-13 21:10:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:40] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:10:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:40] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:10:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:10:41.054531"
+}
+2025-07-13 21:10:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:10:41.054531"
+}
+2025-07-13 21:10:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:41.054913",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:10:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:10:41.054913",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:10:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:10:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:10:58 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:10:58.453145"
+}
+2025-07-13 21:10:58 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:10:58.453145"
+}
+2025-07-13 21:10:58 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T21:10:58.454318"
+}
+2025-07-13 21:10:58 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T21:10:58.454318"
+}
+2025-07-13 21:10:58 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:58] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 21:10:58 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:10:58] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 21:10:58 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:10:58.912286",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      },
+      {
+        "role": "assistant",
+        "content": "你好！有什么我可以帮助你的吗？"
+      },
+      {
+        "role": "user",
+        "content": "What's YOLO"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 50,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": "0:YOLO, 7:great"
+    }
+  }
+}
+2025-07-13 21:10:58 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:10:58.912286",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      },
+      {
+        "role": "assistant",
+        "content": "你好！有什么我可以帮助你的吗？"
+      },
+      {
+        "role": "user",
+        "content": "What's YOLO"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 50,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": "0:YOLO, 7:great"
+    }
+  }
+}
+2025-07-13 21:10:58 - INFO - [server.py:443] - [req_1752412258913] 收到生成请求
+2025-07-13 21:10:58 - INFO - [server.py:443] - [req_1752412258913] 收到生成请求
+2025-07-13 21:10:58 - INFO - [server.py:451] - [req_1752412258913] 请求数据详情:
+2025-07-13 21:10:58 - INFO - [server.py:451] - [req_1752412258913] 请求数据详情:
+2025-07-13 21:10:58 - INFO - [server.py:452] - [req_1752412258913] - 消息数量: 3
+2025-07-13 21:10:58 - INFO - [server.py:452] - [req_1752412258913] - 消息数量: 3
+2025-07-13 21:10:58 - INFO - [server.py:453] - [req_1752412258913] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": "0:YOLO, 7:great"
+}
+2025-07-13 21:10:58 - INFO - [server.py:453] - [req_1752412258913] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": "0:YOLO, 7:great"
+}
+2025-07-13 21:10:58 - DEBUG - [server.py:454] - [req_1752412258913] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好"
+  },
+  {
+    "role": "assistant",
+    "content": "你好！有什么我可以帮助你的吗？"
+  },
+  {
+    "role": "user",
+    "content": "What's YOLO"
+  }
+]
+2025-07-13 21:10:58 - INFO - [server.py:465] - [req_1752412258913] 开始生成响应...
+2025-07-13 21:10:58 - INFO - [server.py:465] - [req_1752412258913] 开始生成响应...
+2025-07-13 21:10:58 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:10:58 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:10:58 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:10:58 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:10:58 - INFO - [server.py:203] - 输入消息数量: 3
+2025-07-13 21:10:58 - INFO - [server.py:203] - 输入消息数量: 3
+2025-07-13 21:10:58 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:10:58 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:10:58 - DEBUG - [server.py:206] - 消息 1 内容: 你好
+2025-07-13 21:10:58 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=15
+2025-07-13 21:10:58 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=15
+2025-07-13 21:10:58 - DEBUG - [server.py:206] - 消息 2 内容: 你好！有什么我可以帮助你的吗？
+2025-07-13 21:10:58 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=11
+2025-07-13 21:10:58 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=11
+2025-07-13 21:10:58 - DEBUG - [server.py:206] - 消息 3 内容: What's YOLO
+2025-07-13 21:10:58 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": "0:YOLO, 7:great"
+}
+2025-07-13 21:10:58 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": "0:YOLO, 7:great"
+}
+2025-07-13 21:10:58 - INFO - [server.py:220] - 解析后的约束: {0: 'YOLO', 7: 'great'}
+2025-07-13 21:10:58 - INFO - [server.py:220] - 解析后的约束: {0: 'YOLO', 7: 'great'}
+2025-07-13 21:10:58 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:10:58 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:10:58 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:10:58 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:10:58 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+你好！有什么我可以帮助你的吗？<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+What's YOLO<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 21:10:58 - INFO - [server.py:234] - 输入token数量: 39
+2025-07-13 21:10:58 - INFO - [server.py:234] - 输入token数量: 39
+2025-07-13 21:10:58 - INFO - [server.py:241] - 序列总长度: 89, prompt长度: 39, 生成长度: 50
+2025-07-13 21:10:58 - INFO - [server.py:241] - 序列总长度: 89, prompt长度: 39, 生成长度: 50
+2025-07-13 21:10:58 - INFO - [server.py:250] - 应用约束数量: 3
+2025-07-13 21:10:58 - INFO - [server.py:250] - 应用约束数量: 3
+2025-07-13 21:10:58 - DEBUG - [server.py:255] - 约束位置 0 (绝对位置 39): token_id=100891
+2025-07-13 21:10:58 - DEBUG - [server.py:255] - 约束位置 1 (绝对位置 40): token_id=3251
+2025-07-13 21:10:58 - DEBUG - [server.py:255] - 约束位置 7 (绝对位置 46): token_id=1612
+2025-07-13 21:10:58 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 21:10:58 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 21:10:58 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 21:10:58 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 21:10:58 - DEBUG - [server.py:289] - 块 1, 步骤 1/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 2/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 3/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 4/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 5/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 6/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 7/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 8/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 9/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 10/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 11/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 12/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 13/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 14/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 15/16
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 1, 步骤 16/16
+2025-07-13 21:10:59 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 21:10:59 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 21:10:59 - DEBUG - [server.py:289] - 块 2, 步骤 1/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 2/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 3/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 4/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 5/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 6/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 7/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 8/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 9/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 10/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 11/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 12/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 13/16
+2025-07-13 21:11:00 - DEBUG - [server.py:289] - 块 2, 步骤 14/16
+2025-07-13 21:11:01 - DEBUG - [server.py:289] - 块 2, 步骤 15/16
+2025-07-13 21:11:01 - DEBUG - [server.py:289] - 块 2, 步骤 16/16
+2025-07-13 21:11:01 - INFO - [server.py:395] - 生成后GPU内存使用: 17.58GB
+2025-07-13 21:11:01 - INFO - [server.py:395] - 生成后GPU内存使用: 17.58GB
+2025-07-13 21:11:01 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:11:01 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:11:01 - INFO - [server.py:398] - 响应文本长度: 231
+2025-07-13 21:11:01 - INFO - [server.py:398] - 响应文本长度: 231
+2025-07-13 21:11:01 - INFO - [server.py:399] - 可视化步骤数: 33
+2025-07-13 21:11:01 - INFO - [server.py:399] - 可视化步骤数: 33
+2025-07-13 21:11:01 - INFO - [server.py:400] - 生成耗时: 2.23秒
+2025-07-13 21:11:01 - INFO - [server.py:400] - 生成耗时: 2.23秒
+2025-07-13 21:11:01 - DEBUG - [server.py:401] - 生成的响应文本:  YOLO stands an acronym with a great meme for "You Only Live Once". ItLOs used to describe a tendency to engage in reckless behavior or take risks with the belief that one's life is short and the rewards are worth the consequences.
+2025-07-13 21:11:01 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:11:01 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:11:01 - INFO - [server.py:474] - [req_1752412258913] 生成成功!
+2025-07-13 21:11:01 - INFO - [server.py:474] - [req_1752412258913] 生成成功!
+2025-07-13 21:11:01 - INFO - [server.py:475] - [req_1752412258913] 响应长度: 231
+2025-07-13 21:11:01 - INFO - [server.py:475] - [req_1752412258913] 响应长度: 231
+2025-07-13 21:11:01 - INFO - [server.py:476] - [req_1752412258913] 可视化步骤: 33
+2025-07-13 21:11:01 - INFO - [server.py:476] - [req_1752412258913] 可视化步骤: 33
+2025-07-13 21:11:01 - INFO - [server.py:477] - [req_1752412258913] 总耗时: 2.23秒
+2025-07-13 21:11:01 - INFO - [server.py:477] - [req_1752412258913] 总耗时: 2.23秒
+2025-07-13 21:11:01 - DEBUG - [server.py:478] - [req_1752412258913] 响应文本:  YOLO stands an acronym with a great meme for "You Only Live Once". ItLOs used to describe a tendency to engage in reckless behavior or take risks with the belief that one's life is short and the rewards are worth the consequences.
+2025-07-13 21:11:01 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 33627,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:11:01.144670"
+}
+2025-07-13 21:11:01 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 33627,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:11:01.144670"
+}
+2025-07-13 21:11:01 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:11:01] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:11:01 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:11:01] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:11:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:11:10.826970"
+}
+2025-07-13 21:11:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:11:10.826970"
+}
+2025-07-13 21:11:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:11:10.827849",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:11:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:11:10.827849",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:11:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:11:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:11:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:11:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:11:18 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:11:18.045188"
+}
+2025-07-13 21:11:18 - INFO - [server.py:73] - 收到请求: {
+  "method": "OPTIONS",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:11:18.045188"
+}
+2025-07-13 21:11:18 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T21:11:18.046136"
+}
+2025-07-13 21:11:18 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": null,
+  "content_type": "text/html; charset=utf-8",
+  "timestamp": "2025-07-13T21:11:18.046136"
+}
+2025-07-13 21:11:18 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:11:18] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 21:11:18 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:11:18] "OPTIONS /generate HTTP/1.1" 200 -
+2025-07-13 21:11:18 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:11:18.509142",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      },
+      {
+        "role": "assistant",
+        "content": "你好！有什么我可以帮助你的吗？"
+      },
+      {
+        "role": "user",
+        "content": "What's YOLO"
+      },
+      {
+        "role": "assistant",
+        "content": " YOLO stands an acronym with a great meme for \"You Only Live Once\". ItLOs used to describe a tendency to engage in reckless behavior or take risks with the belief that one's life is short and the rewards are worth the consequences."
+      },
+      {
+        "role": "user",
+        "content": "Hello"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 50,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 21:11:18 - INFO - [server.py:73] - 收到请求: {
+  "method": "POST",
+  "url": "http://localhost:9000/generate",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:11:18.509142",
+  "json_data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好"
+      },
+      {
+        "role": "assistant",
+        "content": "你好！有什么我可以帮助你的吗？"
+      },
+      {
+        "role": "user",
+        "content": "What's YOLO"
+      },
+      {
+        "role": "assistant",
+        "content": " YOLO stands an acronym with a great meme for \"You Only Live Once\". ItLOs used to describe a tendency to engage in reckless behavior or take risks with the belief that one's life is short and the rewards are worth the consequences."
+      },
+      {
+        "role": "user",
+        "content": "Hello"
+      }
+    ],
+    "settings": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "gen_length": 50,
+      "num_beams": 4,
+      "steps": 32,
+      "cfg_scale": 1,
+      "constraints": ""
+    }
+  }
+}
+2025-07-13 21:11:18 - INFO - [server.py:443] - [req_1752412278510] 收到生成请求
+2025-07-13 21:11:18 - INFO - [server.py:443] - [req_1752412278510] 收到生成请求
+2025-07-13 21:11:18 - INFO - [server.py:451] - [req_1752412278510] 请求数据详情:
+2025-07-13 21:11:18 - INFO - [server.py:451] - [req_1752412278510] 请求数据详情:
+2025-07-13 21:11:18 - INFO - [server.py:452] - [req_1752412278510] - 消息数量: 5
+2025-07-13 21:11:18 - INFO - [server.py:452] - [req_1752412278510] - 消息数量: 5
+2025-07-13 21:11:18 - INFO - [server.py:453] - [req_1752412278510] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 21:11:18 - INFO - [server.py:453] - [req_1752412278510] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 21:11:18 - DEBUG - [server.py:454] - [req_1752412278510] - 完整消息列表: [
+  {
+    "role": "user",
+    "content": "你好"
+  },
+  {
+    "role": "assistant",
+    "content": "你好！有什么我可以帮助你的吗？"
+  },
+  {
+    "role": "user",
+    "content": "What's YOLO"
+  },
+  {
+    "role": "assistant",
+    "content": " YOLO stands an acronym with a great meme for \"You Only Live Once\". ItLOs used to describe a tendency to engage in reckless behavior or take risks with the belief that one's life is short and the rewards are worth the consequences."
+  },
+  {
+    "role": "user",
+    "content": "Hello"
+  }
+]
+2025-07-13 21:11:18 - INFO - [server.py:465] - [req_1752412278510] 开始生成响应...
+2025-07-13 21:11:18 - INFO - [server.py:465] - [req_1752412278510] 开始生成响应...
+2025-07-13 21:11:18 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:11:18 - INFO - [server.py:201] - ============================================================
+2025-07-13 21:11:18 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:11:18 - INFO - [server.py:202] - 开始生成响应
+2025-07-13 21:11:18 - INFO - [server.py:203] - 输入消息数量: 5
+2025-07-13 21:11:18 - INFO - [server.py:203] - 输入消息数量: 5
+2025-07-13 21:11:18 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:11:18 - INFO - [server.py:205] - 消息 1: 角色=user, 内容长度=2
+2025-07-13 21:11:18 - DEBUG - [server.py:206] - 消息 1 内容: 你好
+2025-07-13 21:11:18 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=15
+2025-07-13 21:11:18 - INFO - [server.py:205] - 消息 2: 角色=assistant, 内容长度=15
+2025-07-13 21:11:18 - DEBUG - [server.py:206] - 消息 2 内容: 你好！有什么我可以帮助你的吗？
+2025-07-13 21:11:18 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=11
+2025-07-13 21:11:18 - INFO - [server.py:205] - 消息 3: 角色=user, 内容长度=11
+2025-07-13 21:11:18 - DEBUG - [server.py:206] - 消息 3 内容: What's YOLO
+2025-07-13 21:11:18 - INFO - [server.py:205] - 消息 4: 角色=assistant, 内容长度=231
+2025-07-13 21:11:18 - INFO - [server.py:205] - 消息 4: 角色=assistant, 内容长度=231
+2025-07-13 21:11:18 - DEBUG - [server.py:206] - 消息 4 内容:  YOLO stands an acronym with a great meme for "You Only Live Once". ItLOs used to describe a tendency to engage in reckless behavior or take risks with the belief that one's life is short and the rewards are worth the consequences.
+2025-07-13 21:11:18 - INFO - [server.py:205] - 消息 5: 角色=user, 内容长度=5
+2025-07-13 21:11:18 - INFO - [server.py:205] - 消息 5: 角色=user, 内容长度=5
+2025-07-13 21:11:18 - DEBUG - [server.py:206] - 消息 5 内容: Hello
+2025-07-13 21:11:18 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 21:11:18 - INFO - [server.py:208] - 设置参数: {
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "gen_length": 50,
+  "num_beams": 4,
+  "steps": 32,
+  "cfg_scale": 1,
+  "constraints": ""
+}
+2025-07-13 21:11:18 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 21:11:18 - INFO - [server.py:220] - 解析后的约束: {}
+2025-07-13 21:11:18 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:11:18 - INFO - [server.py:225] - 生成前GPU内存使用: 14.94GB
+2025-07-13 21:11:18 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:11:18 - INFO - [server.py:228] - 准备输入prompt...
+2025-07-13 21:11:18 - DEBUG - [server.py:230] - 格式化后的chat输入: <|startoftext|><|start_header_id|>user<|end_header_id|>
+
+你好<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+你好！有什么我可以帮助你的吗？<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+What's YOLO<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+YOLO stands an acronym with a great meme for "You Only Live Once". ItLOs used to describe a tendency to engage in reckless behavior or take risks with the belief that one's life is short and the rewards are worth the consequences.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Hello<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+2025-07-13 21:11:18 - INFO - [server.py:234] - 输入token数量: 102
+2025-07-13 21:11:18 - INFO - [server.py:234] - 输入token数量: 102
+2025-07-13 21:11:18 - INFO - [server.py:241] - 序列总长度: 152, prompt长度: 102, 生成长度: 50
+2025-07-13 21:11:18 - INFO - [server.py:241] - 序列总长度: 152, prompt长度: 102, 生成长度: 50
+2025-07-13 21:11:18 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 21:11:18 - INFO - [server.py:250] - 应用约束数量: 0
+2025-07-13 21:11:18 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 21:11:18 - INFO - [server.py:270] - 块处理配置: 块长度=32, 块数量=2, 每块步数=16
+2025-07-13 21:11:18 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 21:11:18 - INFO - [server.py:274] - 处理第 1/2 块...
+2025-07-13 21:11:18 - DEBUG - [server.py:289] - 块 1, 步骤 1/16
+2025-07-13 21:11:18 - DEBUG - [server.py:289] - 块 1, 步骤 2/16
+2025-07-13 21:11:18 - DEBUG - [server.py:289] - 块 1, 步骤 3/16
+2025-07-13 21:11:18 - DEBUG - [server.py:289] - 块 1, 步骤 4/16
+2025-07-13 21:11:18 - DEBUG - [server.py:289] - 块 1, 步骤 5/16
+2025-07-13 21:11:19 - DEBUG - [server.py:289] - 块 1, 步骤 6/16
+2025-07-13 21:11:19 - DEBUG - [server.py:289] - 块 1, 步骤 7/16
+2025-07-13 21:11:19 - DEBUG - [server.py:289] - 块 1, 步骤 8/16
+2025-07-13 21:11:19 - DEBUG - [server.py:289] - 块 1, 步骤 9/16
+2025-07-13 21:11:19 - DEBUG - [server.py:289] - 块 1, 步骤 10/16
+2025-07-13 21:11:19 - DEBUG - [server.py:289] - 块 1, 步骤 11/16
+2025-07-13 21:11:19 - DEBUG - [server.py:289] - 块 1, 步骤 12/16
+2025-07-13 21:11:19 - DEBUG - [server.py:289] - 块 1, 步骤 13/16
+2025-07-13 21:11:19 - DEBUG - [server.py:289] - 块 1, 步骤 14/16
+2025-07-13 21:11:19 - DEBUG - [server.py:289] - 块 1, 步骤 15/16
+2025-07-13 21:11:19 - DEBUG - [server.py:289] - 块 1, 步骤 16/16
+2025-07-13 21:11:20 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 21:11:20 - INFO - [server.py:274] - 处理第 2/2 块...
+2025-07-13 21:11:20 - DEBUG - [server.py:289] - 块 2, 步骤 1/16
+2025-07-13 21:11:20 - DEBUG - [server.py:289] - 块 2, 步骤 2/16
+2025-07-13 21:11:20 - DEBUG - [server.py:289] - 块 2, 步骤 3/16
+2025-07-13 21:11:20 - DEBUG - [server.py:289] - 块 2, 步骤 4/16
+2025-07-13 21:11:20 - DEBUG - [server.py:289] - 块 2, 步骤 5/16
+2025-07-13 21:11:20 - DEBUG - [server.py:289] - 块 2, 步骤 6/16
+2025-07-13 21:11:20 - DEBUG - [server.py:289] - 块 2, 步骤 7/16
+2025-07-13 21:11:20 - DEBUG - [server.py:289] - 块 2, 步骤 8/16
+2025-07-13 21:11:20 - DEBUG - [server.py:289] - 块 2, 步骤 9/16
+2025-07-13 21:11:21 - DEBUG - [server.py:289] - 块 2, 步骤 10/16
+2025-07-13 21:11:21 - DEBUG - [server.py:289] - 块 2, 步骤 11/16
+2025-07-13 21:11:21 - DEBUG - [server.py:289] - 块 2, 步骤 12/16
+2025-07-13 21:11:21 - DEBUG - [server.py:289] - 块 2, 步骤 13/16
+2025-07-13 21:11:21 - DEBUG - [server.py:289] - 块 2, 步骤 14/16
+2025-07-13 21:11:21 - DEBUG - [server.py:289] - 块 2, 步骤 15/16
+2025-07-13 21:11:21 - DEBUG - [server.py:289] - 块 2, 步骤 16/16
+2025-07-13 21:11:21 - INFO - [server.py:395] - 生成后GPU内存使用: 19.48GB
+2025-07-13 21:11:21 - INFO - [server.py:395] - 生成后GPU内存使用: 19.48GB
+2025-07-13 21:11:21 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:11:21 - INFO - [server.py:397] - 生成完成!
+2025-07-13 21:11:21 - INFO - [server.py:398] - 响应文本长度: 34
+2025-07-13 21:11:21 - INFO - [server.py:398] - 响应文本长度: 34
+2025-07-13 21:11:21 - INFO - [server.py:399] - 可视化步骤数: 33
+2025-07-13 21:11:21 - INFO - [server.py:399] - 可视化步骤数: 33
+2025-07-13 21:11:21 - INFO - [server.py:400] - 生成耗时: 3.13秒
+2025-07-13 21:11:21 - INFO - [server.py:400] - 生成耗时: 3.13秒
+2025-07-13 21:11:21 - DEBUG - [server.py:401] - 生成的响应文本: Hello! How can I assist you today?
+2025-07-13 21:11:21 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:11:21 - INFO - [server.py:402] - ============================================================
+2025-07-13 21:11:21 - INFO - [server.py:474] - [req_1752412278510] 生成成功!
+2025-07-13 21:11:21 - INFO - [server.py:474] - [req_1752412278510] 生成成功!
+2025-07-13 21:11:21 - INFO - [server.py:475] - [req_1752412278510] 响应长度: 34
+2025-07-13 21:11:21 - INFO - [server.py:475] - [req_1752412278510] 响应长度: 34
+2025-07-13 21:11:21 - INFO - [server.py:476] - [req_1752412278510] 可视化步骤: 33
+2025-07-13 21:11:21 - INFO - [server.py:476] - [req_1752412278510] 可视化步骤: 33
+2025-07-13 21:11:21 - INFO - [server.py:477] - [req_1752412278510] 总耗时: 3.14秒
+2025-07-13 21:11:21 - INFO - [server.py:477] - [req_1752412278510] 总耗时: 3.14秒
+2025-07-13 21:11:21 - DEBUG - [server.py:478] - [req_1752412278510] 响应文本: Hello! How can I assist you today?
+2025-07-13 21:11:21 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 29836,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:11:21.647662"
+}
+2025-07-13 21:11:21 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 29836,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:11:21.647662"
+}
+2025-07-13 21:11:21 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:11:21] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:11:21 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:11:21] "POST /generate HTTP/1.1" 200 -
+2025-07-13 21:11:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:11:40.871876"
+}
+2025-07-13 21:11:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:11:40.871876"
+}
+2025-07-13 21:11:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:11:40.872571",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:11:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:11:40.872571",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:11:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:11:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:11:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:11:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:12:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:12:11.207394"
+}
+2025-07-13 21:12:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:12:11.207394"
+}
+2025-07-13 21:12:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:12:11.208225",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:12:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:12:11.208225",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:12:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:12:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:12:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:12:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:12:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:12:40.860790"
+}
+2025-07-13 21:12:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:12:40.860790"
+}
+2025-07-13 21:12:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:12:40.861316",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:12:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:12:40.861316",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:12:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:12:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:12:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:12:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:13:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:13:10.824209"
+}
+2025-07-13 21:13:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:13:10.824209"
+}
+2025-07-13 21:13:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:13:10.824606",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:13:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:13:10.824606",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:13:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:13:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:13:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:13:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:13:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:13:40.832180"
+}
+2025-07-13 21:13:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:13:40.832180"
+}
+2025-07-13 21:13:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:13:40.832514",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:13:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:13:40.832514",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:13:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:13:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:13:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:13:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:14:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:14:10.843238"
+}
+2025-07-13 21:14:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:14:10.843238"
+}
+2025-07-13 21:14:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:14:10.844091",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:14:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:14:10.844091",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:14:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:14:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:14:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:14:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:14:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:14:40.853167"
+}
+2025-07-13 21:14:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:14:40.853167"
+}
+2025-07-13 21:14:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:14:40.853979",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:14:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:14:40.853979",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:14:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:14:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:14:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:14:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:15:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:15:10.936796"
+}
+2025-07-13 21:15:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:15:10.936796"
+}
+2025-07-13 21:15:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:15:10.937283",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:15:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:15:10.937283",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:15:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:15:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:15:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:15:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:15:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:15:40.859337"
+}
+2025-07-13 21:15:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:15:40.859337"
+}
+2025-07-13 21:15:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:15:40.860188",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:15:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:15:40.860188",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:15:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:15:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:15:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:15:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:16:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:16:11.086092"
+}
+2025-07-13 21:16:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:16:11.086092"
+}
+2025-07-13 21:16:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:16:11.087394",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:16:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:16:11.087394",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:16:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:16:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:16:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:16:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:16:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:16:40.841502"
+}
+2025-07-13 21:16:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:16:40.841502"
+}
+2025-07-13 21:16:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:16:40.842095",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:16:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:16:40.842095",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:16:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:16:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:16:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:16:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:17:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:17:11.857113"
+}
+2025-07-13 21:17:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:17:11.857113"
+}
+2025-07-13 21:17:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:17:11.857912",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:17:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:17:11.857912",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:17:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:17:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:17:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:17:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:17:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:17:40.842717"
+}
+2025-07-13 21:17:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:17:40.842717"
+}
+2025-07-13 21:17:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:17:40.843504",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:17:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:17:40.843504",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:17:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:17:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:17:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:17:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:18:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:18:10.841410"
+}
+2025-07-13 21:18:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:18:10.841410"
+}
+2025-07-13 21:18:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:18:10.841756",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:18:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:18:10.841756",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:18:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:18:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:18:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:18:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:18:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:18:40.840964"
+}
+2025-07-13 21:18:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:18:40.840964"
+}
+2025-07-13 21:18:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:18:40.841834",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:18:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:18:40.841834",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:18:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:18:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:18:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:18:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:19:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:19:10.862355"
+}
+2025-07-13 21:19:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:19:10.862355"
+}
+2025-07-13 21:19:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:19:10.863202",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:19:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:19:10.863202",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:19:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:19:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:19:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:19:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:19:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:19:40.977828"
+}
+2025-07-13 21:19:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:19:40.977828"
+}
+2025-07-13 21:19:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:19:40.978652",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:19:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:19:40.978652",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:19:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:19:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:19:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:19:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:20:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:20:10.852636"
+}
+2025-07-13 21:20:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:20:10.852636"
+}
+2025-07-13 21:20:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:20:10.853168",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:20:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:20:10.853168",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:20:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:20:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:20:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:20:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:20:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:20:41.387707"
+}
+2025-07-13 21:20:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:20:41.387707"
+}
+2025-07-13 21:20:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:20:41.388550",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:20:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:20:41.388550",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:20:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:20:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:20:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:20:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:21:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:21:10.845322"
+}
+2025-07-13 21:21:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:21:10.845322"
+}
+2025-07-13 21:21:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:21:10.846153",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:21:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:21:10.846153",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:21:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:21:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:21:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:21:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:21:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:21:41.243212"
+}
+2025-07-13 21:21:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:21:41.243212"
+}
+2025-07-13 21:21:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:21:41.244056",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:21:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:21:41.244056",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:21:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:21:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:21:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:21:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:22:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:22:10.933133"
+}
+2025-07-13 21:22:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:22:10.933133"
+}
+2025-07-13 21:22:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:22:10.933454",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:22:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:22:10.933454",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:22:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:22:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:22:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:22:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:22:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:22:40.974582"
+}
+2025-07-13 21:22:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:22:40.974582"
+}
+2025-07-13 21:22:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:22:40.975440",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:22:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:22:40.975440",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:22:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:22:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:22:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:22:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:23:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:23:10.866637"
+}
+2025-07-13 21:23:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:23:10.866637"
+}
+2025-07-13 21:23:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:23:10.867514",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:23:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:23:10.867514",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:23:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:23:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:23:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:23:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:23:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:23:41.024119"
+}
+2025-07-13 21:23:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:23:41.024119"
+}
+2025-07-13 21:23:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:23:41.024933",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:23:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:23:41.024933",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:23:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:23:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:23:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:23:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:24:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:24:10.837019"
+}
+2025-07-13 21:24:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:24:10.837019"
+}
+2025-07-13 21:24:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:24:10.837888",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:24:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:24:10.837888",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:24:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:24:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:24:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:24:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:24:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:24:40.845546"
+}
+2025-07-13 21:24:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:24:40.845546"
+}
+2025-07-13 21:24:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:24:40.845894",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:24:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:24:40.845894",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:24:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:24:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:24:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:24:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:25:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:25:10.960249"
+}
+2025-07-13 21:25:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:25:10.960249"
+}
+2025-07-13 21:25:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:25:10.961055",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:25:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:25:10.961055",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:25:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:25:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:25:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:25:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:25:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:25:40.945929"
+}
+2025-07-13 21:25:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:25:40.945929"
+}
+2025-07-13 21:25:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:25:40.946320",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:25:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:25:40.946320",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:25:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:25:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:25:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:25:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:26:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:26:10.867456"
+}
+2025-07-13 21:26:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:26:10.867456"
+}
+2025-07-13 21:26:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:26:10.868276",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:26:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:26:10.868276",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:26:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:26:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:26:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:26:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:26:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:26:41.883376"
+}
+2025-07-13 21:26:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:26:41.883376"
+}
+2025-07-13 21:26:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:26:41.884197",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:26:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:26:41.884197",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:26:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:26:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:26:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:26:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:27:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:27:11.001335"
+}
+2025-07-13 21:27:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:27:11.001335"
+}
+2025-07-13 21:27:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:27:11.002738",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:27:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:27:11.002738",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:27:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:27:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:27:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:27:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:27:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:27:40.860445"
+}
+2025-07-13 21:27:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:27:40.860445"
+}
+2025-07-13 21:27:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:27:40.861265",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:27:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:27:40.861265",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:27:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:27:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:27:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:27:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:28:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:28:11.129027"
+}
+2025-07-13 21:28:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:28:11.129027"
+}
+2025-07-13 21:28:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:28:11.129842",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:28:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:28:11.129842",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:28:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:28:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:28:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:28:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:28:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:28:40.855681"
+}
+2025-07-13 21:28:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:28:40.855681"
+}
+2025-07-13 21:28:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:28:40.856541",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:28:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:28:40.856541",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:28:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:28:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:28:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:28:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:29:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:29:11.097232"
+}
+2025-07-13 21:29:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:29:11.097232"
+}
+2025-07-13 21:29:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:29:11.098035",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:29:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:29:11.098035",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:29:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:29:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:29:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:29:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:29:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:29:41.619187"
+}
+2025-07-13 21:29:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:29:41.619187"
+}
+2025-07-13 21:29:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:29:41.619731",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:29:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:29:41.619731",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:29:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:29:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:29:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:29:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:30:12 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:30:12.044277"
+}
+2025-07-13 21:30:12 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:30:12.044277"
+}
+2025-07-13 21:30:12 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:30:12.045108",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:30:12 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:30:12.045108",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:30:12 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:30:12] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:30:12 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:30:12] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:30:42 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:30:42.130111"
+}
+2025-07-13 21:30:42 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:30:42.130111"
+}
+2025-07-13 21:30:42 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:30:42.131157",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:30:42 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:30:42.131157",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:30:42 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:30:42] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:30:42 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:30:42] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:31:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:31:10.859323"
+}
+2025-07-13 21:31:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:31:10.859323"
+}
+2025-07-13 21:31:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:31:10.859869",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:31:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:31:10.859869",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:31:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:31:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:31:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:31:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:31:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:31:40.929240"
+}
+2025-07-13 21:31:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:31:40.929240"
+}
+2025-07-13 21:31:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:31:40.930085",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:31:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:31:40.930085",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:31:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:31:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:31:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:31:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:32:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:32:11.895672"
+}
+2025-07-13 21:32:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:32:11.895672"
+}
+2025-07-13 21:32:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:32:11.896298",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:32:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:32:11.896298",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:32:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:32:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:32:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:32:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:32:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:32:41.601631"
+}
+2025-07-13 21:32:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:32:41.601631"
+}
+2025-07-13 21:32:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:32:41.602694",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:32:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:32:41.602694",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:32:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:32:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:32:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:32:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:33:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:33:10.864475"
+}
+2025-07-13 21:33:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:33:10.864475"
+}
+2025-07-13 21:33:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:33:10.865273",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:33:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:33:10.865273",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:33:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:33:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:33:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:33:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:33:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:33:41.620233"
+}
+2025-07-13 21:33:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:33:41.620233"
+}
+2025-07-13 21:33:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:33:41.620588",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:33:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:33:41.620588",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:33:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:33:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:33:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:33:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:34:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:34:10.934593"
+}
+2025-07-13 21:34:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:34:10.934593"
+}
+2025-07-13 21:34:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:34:10.935394",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:34:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:34:10.935394",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:34:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:34:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:34:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:34:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:34:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:34:40.885249"
+}
+2025-07-13 21:34:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:34:40.885249"
+}
+2025-07-13 21:34:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:34:40.886068",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:34:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:34:40.886068",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:34:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:34:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:34:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:34:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:35:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:35:11.614462"
+}
+2025-07-13 21:35:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:35:11.614462"
+}
+2025-07-13 21:35:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:35:11.615511",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:35:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:35:11.615511",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:35:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:35:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:35:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:35:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:35:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:35:41.693869"
+}
+2025-07-13 21:35:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:35:41.693869"
+}
+2025-07-13 21:35:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:35:41.694725",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:35:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:35:41.694725",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:35:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:35:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:35:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:35:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:36:15 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:36:15.613135"
+}
+2025-07-13 21:36:15 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:36:15.613135"
+}
+2025-07-13 21:36:15 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:36:15.613934",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:36:15 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:36:15.613934",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:36:15 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:36:15] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:36:15 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:36:15] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:36:49 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:36:49.358514"
+}
+2025-07-13 21:36:49 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:36:49.358514"
+}
+2025-07-13 21:36:49 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:36:49.359336",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:36:49 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:36:49.359336",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:36:49 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:36:49] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:36:49 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:36:49] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:37:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:37:11.606468"
+}
+2025-07-13 21:37:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:37:11.606468"
+}
+2025-07-13 21:37:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:37:11.607277",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:37:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:37:11.607277",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:37:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:37:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:37:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:37:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:37:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:37:40.958894"
+}
+2025-07-13 21:37:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:37:40.958894"
+}
+2025-07-13 21:37:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:37:40.959769",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:37:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:37:40.959769",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:37:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:37:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:37:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:37:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:38:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:38:10.857590"
+}
+2025-07-13 21:38:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:38:10.857590"
+}
+2025-07-13 21:38:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:38:10.858412",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:38:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:38:10.858412",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:38:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:38:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:38:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:38:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:38:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:38:40.860892"
+}
+2025-07-13 21:38:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:38:40.860892"
+}
+2025-07-13 21:38:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:38:40.861698",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:38:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:38:40.861698",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:38:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:38:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:38:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:38:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:39:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:39:10.901180"
+}
+2025-07-13 21:39:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:39:10.901180"
+}
+2025-07-13 21:39:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:39:10.901986",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:39:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:39:10.901986",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:39:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:39:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:39:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:39:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:39:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:39:40.863759"
+}
+2025-07-13 21:39:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:39:40.863759"
+}
+2025-07-13 21:39:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:39:40.864561",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:39:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:39:40.864561",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:39:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:39:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:39:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:39:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:40:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:40:10.859931"
+}
+2025-07-13 21:40:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:40:10.859931"
+}
+2025-07-13 21:40:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:40:10.860760",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:40:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:40:10.860760",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:40:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:40:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:40:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:40:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:40:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:40:40.844900"
+}
+2025-07-13 21:40:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:40:40.844900"
+}
+2025-07-13 21:40:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:40:40.845715",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:40:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:40:40.845715",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:40:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:40:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:40:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:40:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:41:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:41:10.854482"
+}
+2025-07-13 21:41:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:41:10.854482"
+}
+2025-07-13 21:41:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:41:10.855168",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:41:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:41:10.855168",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:41:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:41:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:41:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:41:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:41:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:41:41.022049"
+}
+2025-07-13 21:41:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:41:41.022049"
+}
+2025-07-13 21:41:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:41:41.022897",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:41:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:41:41.022897",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:41:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:41:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:41:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:41:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:42:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:42:11.414824"
+}
+2025-07-13 21:42:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:42:11.414824"
+}
+2025-07-13 21:42:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:42:11.415649",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:42:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:42:11.415649",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:42:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:42:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:42:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:42:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:42:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:42:40.874083"
+}
+2025-07-13 21:42:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:42:40.874083"
+}
+2025-07-13 21:42:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:42:40.874897",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:42:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:42:40.874897",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:42:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:42:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:42:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:42:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:43:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:43:10.899815"
+}
+2025-07-13 21:43:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:43:10.899815"
+}
+2025-07-13 21:43:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:43:10.900204",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:43:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:43:10.900204",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:43:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:43:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:43:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:43:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:43:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:43:40.875060"
+}
+2025-07-13 21:43:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:43:40.875060"
+}
+2025-07-13 21:43:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:43:40.875904",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:43:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:43:40.875904",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:43:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:43:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:43:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:43:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:44:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:44:11.759434"
+}
+2025-07-13 21:44:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:44:11.759434"
+}
+2025-07-13 21:44:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:44:11.760327",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:44:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:44:11.760327",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:44:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:44:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:44:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:44:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:44:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:44:41.253905"
+}
+2025-07-13 21:44:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:44:41.253905"
+}
+2025-07-13 21:44:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:44:41.254814",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:44:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:44:41.254814",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:44:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:44:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:44:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:44:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:45:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:45:10.879930"
+}
+2025-07-13 21:45:10 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:45:10.879930"
+}
+2025-07-13 21:45:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:45:10.880725",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:45:10 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:45:10.880725",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:45:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:45:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:45:10 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:45:10] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:45:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:45:40.879023"
+}
+2025-07-13 21:45:40 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:45:40.879023"
+}
+2025-07-13 21:45:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:45:40.879867",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:45:40 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:45:40.879867",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:45:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:45:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:45:40 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:45:40] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:46:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:46:11.664007"
+}
+2025-07-13 21:46:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:46:11.664007"
+}
+2025-07-13 21:46:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:46:11.664356",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:46:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:46:11.664356",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:46:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:46:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:46:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:46:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:46:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:46:41.971507"
+}
+2025-07-13 21:46:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:46:41.971507"
+}
+2025-07-13 21:46:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:46:41.972406",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:46:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:46:41.972406",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:46:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:46:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:46:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:46:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:47:16 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:47:16.335055"
+}
+2025-07-13 21:47:16 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:47:16.335055"
+}
+2025-07-13 21:47:16 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:47:16.335926",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:47:16 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:47:16.335926",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:47:16 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:47:16] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:47:16 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:47:16] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:48:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:48:11.861536"
+}
+2025-07-13 21:48:11 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:48:11.861536"
+}
+2025-07-13 21:48:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:48:11.862349",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:48:11 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:48:11.862349",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:48:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:48:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:48:11 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:48:11] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:48:13 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:48:13.133992"
+}
+2025-07-13 21:48:13 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:48:13.133992"
+}
+2025-07-13 21:48:13 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:48:13.134310",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:48:13 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:48:13.134310",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:48:13 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:48:13] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:48:13 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:48:13] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:48:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:48:41.123044"
+}
+2025-07-13 21:48:41 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:48:41.123044"
+}
+2025-07-13 21:48:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:48:41.123430",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:48:41 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:48:41.123430",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:48:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:48:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:48:41 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:48:41] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:48:51 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:48:51.528523"
+}
+2025-07-13 21:48:51 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:48:51.528523"
+}
+2025-07-13 21:48:51 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:48:51.529582",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:48:51 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:48:51.529582",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:48:51 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:48:51] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:48:51 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:48:51] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:48:52 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:48:52.261797"
+}
+2025-07-13 21:48:52 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:48:52.261797"
+}
+2025-07-13 21:48:52 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:48:52.262604",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:48:52 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:48:52.262604",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:48:52 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:48:52] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:48:52 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:48:52] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:49:22 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:49:22.333088"
+}
+2025-07-13 21:49:22 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:49:22.333088"
+}
+2025-07-13 21:49:22 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:49:22.333918",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:49:22 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:49:22.333918",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:49:22 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:49:22] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:49:22 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:49:22] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:49:51 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:49:51.658543"
+}
+2025-07-13 21:49:51 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:49:51.658543"
+}
+2025-07-13 21:49:51 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:49:51.659335",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:49:51 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:49:51.659335",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:49:51 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:49:51] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:49:51 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:49:51] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:50:21 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:50:21.396847"
+}
+2025-07-13 21:50:21 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:50:21.396847"
+}
+2025-07-13 21:50:21 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:50:21.397255",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:50:21 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:50:21.397255",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:50:21 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:50:21] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:50:21 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:50:21] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:50:51 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:50:51.523540"
+}
+2025-07-13 21:50:51 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:50:51.523540"
+}
+2025-07-13 21:50:51 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:50:51.523999",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:50:51 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:50:51.523999",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:50:51 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:50:51] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:50:51 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:50:51] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:51:23 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:51:23.447015"
+}
+2025-07-13 21:51:23 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:51:23.447015"
+}
+2025-07-13 21:51:23 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:51:23.447553",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:51:23 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:51:23.447553",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:51:23 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:51:23] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:51:23 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:51:23] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:51:54 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:51:54.619465"
+}
+2025-07-13 21:51:54 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:51:54.619465"
+}
+2025-07-13 21:51:54 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:51:54.619886",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:51:54 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:51:54.619886",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:51:54 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:51:54] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:51:54 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:51:54] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:52:22 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:52:22.012609"
+}
+2025-07-13 21:52:22 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:52:22.012609"
+}
+2025-07-13 21:52:22 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:52:22.013414",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:52:22 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:52:22.013414",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:52:22 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:52:22] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:52:22 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:52:22] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:53:17 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:53:17.709963"
+}
+2025-07-13 21:53:17 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:53:17.709963"
+}
+2025-07-13 21:53:17 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:53:17.710335",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:53:17 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:53:17.710335",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:53:17 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:53:17] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:53:17 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:53:17] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:54:16 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:54:16.534177"
+}
+2025-07-13 21:54:16 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:54:16.534177"
+}
+2025-07-13 21:54:16 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:54:16.535030",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:54:16 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:54:16.535030",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:54:16 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:54:16] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:54:16 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:54:16] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:55:16 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:55:16.202539"
+}
+2025-07-13 21:55:16 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:55:16.202539"
+}
+2025-07-13 21:55:16 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:55:16.203360",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:55:16 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:55:16.203360",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:55:16 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:55:16] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:55:16 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:55:16] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:56:16 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:56:16.291644"
+}
+2025-07-13 21:56:16 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:56:16.291644"
+}
+2025-07-13 21:56:16 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:56:16.292531",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:56:16 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:56:16.292531",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:56:16 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:56:16] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:56:16 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:56:16] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:57:15 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:57:15.737294"
+}
+2025-07-13 21:57:15 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:57:15.737294"
+}
+2025-07-13 21:57:15 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:57:15.737604",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:57:15 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:57:15.737604",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:57:15 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:57:15] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:57:15 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:57:15] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:58:15 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:58:15.716931"
+}
+2025-07-13 21:58:15 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:58:15.716931"
+}
+2025-07-13 21:58:15 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:58:15.717764",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:58:15 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:58:15.717764",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:58:15 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:58:15] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:58:15 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:58:15] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:58:32 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:58:32.842641"
+}
+2025-07-13 21:58:32 - INFO - [server.py:73] - 收到请求: {
+  "method": "GET",
+  "url": "http://localhost:9000/health",
+  "remote_addr": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+  "timestamp": "2025-07-13T21:58:32.842641"
+}
+2025-07-13 21:58:32 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:58:32.843557",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:58:32 - INFO - [server.py:92] - 发送响应: {
+  "status_code": 200,
+  "content_length": 37,
+  "content_type": "application/json",
+  "timestamp": "2025-07-13T21:58:32.843557",
+  "response_body": "{\"device\":\"cuda\",\"status\":\"healthy\"}\n"
+}
+2025-07-13 21:58:32 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:58:32] "GET /health HTTP/1.1" 200 -
+2025-07-13 21:58:32 - INFO - [_internal.py:97] - 127.0.0.1 - - [13/Jul/2025 21:58:32] "GET /health HTTP/1.1" 200 -

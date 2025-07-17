@@ -1,0 +1,23 @@
+=== LLaDA 后端服务日志 ===
+启动时间: Mon Jul 14 00:43:24 CST 2025
+日志会话: 20250714_004324
+Python版本: Python 3.12.3
+工作目录: /root/LLaDA-main/lldm
+设备检测: CUDA可用: True
+==========================
+
+Using device: cuda
+GPU memory before loading: 23.5GB
+Loading tokenizer...
+Loading model...
+The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:02,  1.89it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:01<00:02,  1.72it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:01<00:01,  1.57it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:02<00:01,  1.52it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:03<00:00,  1.44it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:03<00:00,  1.60it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:03<00:00,  1.58it/s]
+Model loaded successfully on cuda
+GPU memory after loading: 14.9GB allocated
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.0.3:5000
+[33mPress CTRL+C to quit[0m
